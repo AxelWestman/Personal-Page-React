@@ -3,8 +3,11 @@ import React from  'react';
 const Header_component = () => {
 
     return (
-        <h1 className='text-red-700'>Hola Mudo</h1>
-
+        <>
+            <div className='w-full h-lvh bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col text-center items-center justify-center'>
+                <h1 className='font-baskerville text-7xl text-white'>Axel Westman</h1>
+            </div>
+        </>
     );
 }
 

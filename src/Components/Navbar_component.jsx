@@ -64,7 +64,7 @@ const Navbar_component = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className='bg-gradient-to-r from-blue-800 to-indigo-900 bg-opacity-25'>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

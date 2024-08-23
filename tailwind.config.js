@@ -8,7 +8,14 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}", 
     ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+          baskerville:["Libre Baskerville", "serif"],
+      },
+      colors:{
+        
+      }
+    },
   },
   darkMode: "class",
   plugins: [nextui()],
