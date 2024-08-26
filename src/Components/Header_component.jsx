@@ -5,7 +5,7 @@ const Header_component = () => {
 
     return (
         <>
-            <div className='w-full h-lvh bg-gradient-to-r from-blue-800 to-indigo-900 flex flex-col text-center items-center justify-center'>
+            <div className='w-full h-lvh flex flex-col text-center items-center justify-center'>
             <div className='w-52 h-52 border rounded-full flex flex-col mb-4'>
                 <img src={MePhoto} alt="Me" className='object-contain overflow-hidden'/>
             </div>
