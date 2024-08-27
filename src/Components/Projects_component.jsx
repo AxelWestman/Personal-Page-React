@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import Bootstrap_page from '../assets/images/bootstrap_page.png';
+import Tailwind_page from '../assets/images/tailwind-project.png';
 
 
 const Projects_component = () => {
@@ -20,6 +21,24 @@ const Projects_component = () => {
                         </div>
                         <div className='p-3'>
                             <h2 className='text-2xl'>Bootstrap</h2>
+                            <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
+                        </div>
+                    </div>
+                    <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
+                        <div className='w-full h-48 bg-tailwind-photo bg-cover bg-no-repeat bg-center rounded-t-md'>
+                            
+                        </div>
+                        <div className='p-3'>
+                            <h2 className='text-2xl'>Tailwind</h2>
+                            <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
+                        </div>
+                    </div>
+                    <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
+                        <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md'>
+                            
+                        </div>
+                        <div className='p-3'>
+                            <h2 className='text-2xl'>React</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>

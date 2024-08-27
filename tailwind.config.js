@@ -11,6 +11,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'bootstrap-photo': "url('src/assets/images/bootstrap_page.png')",
+        'tailwind-photo': "url('src/assets/images/tailwind-project.png')",
+        'react-photo': "url('src/assets/images/react-photo.png')",
       },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],
