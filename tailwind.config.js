@@ -9,6 +9,9 @@ module.exports = {
     ],
   theme: {
     extend: {
+      backgroundImage: {
+        'bootstrap-photo': "url('src/assets/images/bootstrap_page.png')",
+      },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],
       },
