@@ -26,15 +26,11 @@ const Navbar_component = () => {
 
       <NavbarContent className="sm:hidden pr-3 " justify="center">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
         <NavbarItem>
           <Link color="foreground" href="#">
@@ -58,9 +54,6 @@ const Navbar_component = () => {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} href="#" variant="flat" className='bg-red-700'>
-            Sign Up
-          </Button>
         </NavbarItem>
       </NavbarContent>
 
