@@ -13,6 +13,8 @@ import javascript_logo from '../assets/images/javascript.png';
 import react_logo from '../assets/images/react.png';
 import css_photo from '../assets/images/css.png';
 import php_logo from '../assets/images/php.png';
+import spacex from '../assets/images/spacex.png';
+import github from '../assets/svg/github.svg';
 
 
 
@@ -20,7 +22,7 @@ const Projects_component = () => {
     
     return(
         <>
-            <div className='w-full h-auto'>
+            <div className='w-full h-auto mt-24 flex flex-col items-center'>
                 <h2 className='text-3xl font-baskerville text-white text-center mb-4'>Proyectos</h2>
                 <div className='w-full h-auto flex flex-col items-center justify-center md:flex-row md:gap-10 md:flex-wrap'>
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
@@ -83,14 +85,16 @@ const Projects_component = () => {
                         </div>
                     </div>
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
-                        <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                        <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                <img src={css_photo} alt="css logo" className='w-10' />
-                                <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                <img src={react_logo} alt="react logo" className='w-10' />
+                        <a href="https://axelwestman.github.io/spacex-missions/" target='_blank' className='w-full'>
+                            <div className='w-full h-48 bg-spacex bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
+                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
+                                    <img src={tailwind_logo} alt="tailwind logo" className='w-10 object-contain' />
+                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
+                                    <img src={react_logo} alt="react logo" className='w-10' />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div className='p-3'>
                             <h2 className='text-2xl'>React</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
@@ -110,7 +114,14 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
+
                 </div>
+                <a href="https://github.com/AxelWestman" target='_blank'>
+                    <div className='w-36 h-14 bg-gray-700 text-white font-baskerville rounded-md flex justify-center items-center gap-3'>
+                        <img src={github} alt="github logo" className='w-9'/>
+                        <h2 className='text-xl mt-1'>Ver más</h2>
+                </div>
+                </a>
             </div>
         </>
     );

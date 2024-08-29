@@ -13,6 +13,7 @@ module.exports = {
         'bootstrap-photo': "url('src/assets/images/bootstrap_page.png')",
         'tailwind-photo': "url('src/assets/images/tailwind-project.png')",
         'react-photo': "url('src/assets/images/react-photo.png')",
+        'spacex': "url('src/assets/images/spacex.png')"
       },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],
