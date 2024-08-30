@@ -23,11 +23,7 @@ module.exports = {
         'tailwind-photo': "url('src/assets/images/tailwind-project.png')",
         'react-photo': "url('src/assets/images/react-photo.png')",
         'spacex': "url('src/assets/images/spacex.png')",
-        'gradient-bg': {
-          'background-image': 'linear-gradient(135deg, hsla(350, 100%, 31%, 1) 0%, hsla(229, 56%, 20%, 1) 87%)',
-          'background-size': 'cover',
-          'background-position': 'center'
-        }
+        'php-project': "url('src/assets/images/php_page.png')",
       },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],

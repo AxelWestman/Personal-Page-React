@@ -72,7 +72,7 @@ const Projects_component = () => {
                         </div>
                     </div>
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
-                        <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                        <div className='w-full h-48 bg-php-project bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                         <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
                                 <img src={html_photo} alt="html logo" className='w-10 ml-1' />
                                 <img src={css_photo} alt="css logo" className='w-10' />

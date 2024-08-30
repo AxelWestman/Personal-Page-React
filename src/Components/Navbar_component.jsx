@@ -1,24 +1,17 @@
 import React from  'react';
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './About_component';
+
 
 const Navbar_component = () => {
 
-    const menuItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
-      ];
+ 
 
     return(
         <>
+      <BrowserRouter>
      <Navbar disableAnimation isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
@@ -34,17 +27,30 @@ const Navbar_component = () => {
         </NavbarBrand>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Features
+            Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page" color="warning">
-            Customers
+        <NavbarItem>
+          <Link color="foreground" to="./about" >
+            Sobre mi
+          </Link>
+          <Routes>
+          <Route path="./about" element={<About />} />
+          </Routes>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Tecnologías
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+            Proyectos
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Títulos y Certificaciones
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -57,23 +63,17 @@ const Navbar_component = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className='bg-gradient-to-r from-blue-800 to-indigo-900 bg-opacity-25'>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu className='bg-gray-900 bg-opacity-60'>
+        <ul>
+          <li className='text-3xl font-baskerville text-white mb-4 mt-5'>Home</li>
+          <li className='text-3xl font-baskerville text-white mb-4'>Sobre mi</li>
+          <li className='text-3xl font-baskerville text-white mb-4'>Tecnologías</li>
+          <li className='text-3xl font-baskerville text-white mb-4'>Proyectos</li>
+          <li className='text-3xl font-baskerville text-white mb-4'>Títulos y Certificaciones</li>
+        </ul>
       </NavbarMenu>
     </Navbar>
+    </BrowserRouter>
     </>
     );
 }
