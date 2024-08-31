@@ -10,6 +10,7 @@ import Technologies_component from './Components/Technologies_component';
 import Footer_component from './Components/Footer_component';
 import Projects_component from './Components/Projects_component';
 import Certifications_component from './Components/Certifications_component';
+import Header_about_component from './Components/Header_about_component';
 
 
 function App() {
@@ -19,8 +20,7 @@ function App() {
     <> 
     <Router>
         <Navbar_component />
-        <Header_component />
-        <About_component />
+        <Header_about_component />
         <Technologies_component />
         <Projects_component />
         <Certifications_component />

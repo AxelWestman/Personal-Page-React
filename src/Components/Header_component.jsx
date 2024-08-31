@@ -20,7 +20,7 @@ const Header_component = () => {
                         onInit={typewriter => {
                             typewriter
                             .typeString('Web Developer')
-                            .pauseFor(2000)
+                            .pauseFor(3000)
                             .deleteAll()
                             .start()
                         }}

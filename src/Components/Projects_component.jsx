@@ -120,7 +120,7 @@ const Projects_component = () => {
                     <div className='w-36 h-14 bg-gray-700 text-white font-baskerville rounded-md flex justify-center items-center gap-3'>
                         <img src={github} alt="github logo" className='w-9'/>
                         <h2 className='text-xl mt-1'>Ver más</h2>
-                </div>
+                    </div>
                 </a>
             </div>
         </>
