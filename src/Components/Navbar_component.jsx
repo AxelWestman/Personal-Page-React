@@ -1,17 +1,25 @@
 import React from  'react';
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import { Link as Enlace} from 'react-router-dom';
+
+
 import {AcmeLogo} from "./AcmeLogo";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './About_component';
 
 
 const Navbar_component = () => {
 
- 
+
+
+  const scrollToSection = (sectionId) => {
+    scroller.scrollTo(sectionId, {
+      duration: 800,
+      smooth: true,
+      offset: -70 // Ajusta el offset según tu diseño
+    });
+  };
 
     return(
         <>
-      <BrowserRouter>
      <Navbar disableAnimation isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
@@ -26,38 +34,35 @@ const Navbar_component = () => {
         <NavbarBrand>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="#header"  color="foreground" >
             Home
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" to="./about" >
+          <a href="#about" color="foreground" >
             Sobre mi
-          </Link>
-          <Routes>
-          <Route path="./about" element={<About />} />
-          </Routes>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="#tecnologias" color="foreground" >
             Tecnologías
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="#proyectos" color="foreground" >
             Proyectos
-          </Link>
+          </a>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <a href="#certificaciones" color="foreground" >
             Títulos y Certificaciones
-          </Link>
+          </a>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end" className=''>
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link>Login</Link>
         </NavbarItem>
         <NavbarItem>
         </NavbarItem>
@@ -65,15 +70,15 @@ const Navbar_component = () => {
 
       <NavbarMenu className='bg-gray-900 bg-opacity-60'>
         <ul>
-          <li className='text-3xl font-baskerville text-white mb-4 mt-5'>Home</li>
-          <li className='text-3xl font-baskerville text-white mb-4'>Sobre mi</li>
-          <li className='text-3xl font-baskerville text-white mb-4'>Tecnologías</li>
-          <li className='text-3xl font-baskerville text-white mb-4'>Proyectos</li>
-          <li className='text-3xl font-baskerville text-white mb-4'>Títulos y Certificaciones</li>
+          <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header">Home</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#about">Sobre mi</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias">Tecnologías</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos">Proyectos</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#certificaciones">Títulos y Certificaciones</a></li>
         </ul>
       </NavbarMenu>
     </Navbar>
-    </BrowserRouter>
+   
     </>
     );
 }

@@ -17,7 +17,7 @@ const Technologies_component = () => {
 
     return(
             <>
-                <div className='w-full h-96 flex flex-col items-center justify-center'>
+                <div className='w-full h-96 flex flex-col items-center justify-center' id="tecnologias">
                     <div className='w-4/5 h-auto flex flex-wrap items-center justify-center md:flex-col'>
                         <h2 className='text-center text-white text-3xl font-baskerville'>Tecnologías</h2>
                         <div className='w-full h-auto flex flex-wrap items-center justify-center mt-4 md:w-1/2'>

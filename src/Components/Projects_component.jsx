@@ -22,7 +22,7 @@ const Projects_component = () => {
     
     return(
         <>
-            <div className='w-full h-auto mt-24 flex flex-col items-center'>
+            <div className='w-full h-auto mt-24 flex flex-col items-center' id="proyectos">
                 <h2 className='text-3xl font-baskerville text-white text-center mb-4'>Proyectos</h2>
                 <div className='w-full h-auto flex flex-col items-center justify-center md:flex-row md:gap-10 md:flex-wrap'>
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
