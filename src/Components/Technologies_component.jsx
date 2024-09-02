@@ -11,14 +11,44 @@ import figma_logo from '../assets/images/figma.png';
 import tailwind_logo from '../assets/images/tailwind.png';
 import bootstrap_logo from '../assets/images/bootstrap.png';
 import git_logo from '../assets/images/git.png';
+import { useState, useRef, useEffect} from 'react';
 
 
 const Technologies_component = () => {
 
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+                setIsIntersecting(entry.isIntersecting);
+              },
+              { rootMargin: "-150px" }
+        );
+        console.log(isIntersecting);
+        observer.observe(ref.current);
+        
+        return () => observer.disconnect();
+      }, [isIntersecting]);
+
+      useEffect(() => {
+        if (isIntersecting) {
+          const firstDiv = ref.current.querySelector("div"); // Seleccionamos el primer div
+      
+          if (firstDiv) {
+            firstDiv.classList.add("translate-y-[-0%]");
+            firstDiv.classList.add("slide-in");
+            firstDiv.classList.remove("opacity-0");
+          }
+        }
+      }, [isIntersecting]);
+
+
     return(
             <>
-                <div className='w-full h-96 flex flex-col items-center justify-center' id="tecnologias">
-                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center md:flex-col'>
+                <div ref={ref} className='w-full h-96 flex flex-col items-center justify-center' id="tecnologias">
+                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col'>
                         <h2 className='text-center text-white text-3xl font-baskerville'>Tecnologías</h2>
                         <div className='w-full h-auto flex flex-wrap items-center justify-center mt-4 md:w-1/2'>
                             <img src={figma_logo} alt="figma logo" className='w-20'/>

@@ -15,16 +15,47 @@ import css_photo from '../assets/images/css.png';
 import php_logo from '../assets/images/php.png';
 import spacex from '../assets/images/spacex.png';
 import github from '../assets/svg/github.svg';
+import { useState, useRef, useEffect} from 'react';
 
 
 
 const Projects_component = () => {
+
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+                setIsIntersecting(entry.isIntersecting);
+              },
+              { rootMargin: "-150px" }
+        );
+        console.log(isIntersecting);
+        observer.observe(ref.current);
+        
+        return () => observer.disconnect();
+      }, [isIntersecting]);
+
+      useEffect(() => {
+        if (isIntersecting) {
+            ref.current.querySelectorAll("div").forEach((el) => {
+                el.classList.add("translate-y-[-0%]")
+                el.classList.add("slide-in");
+                el.classList.remove("opacity-0");
+            });
+        }
+      }, [isIntersecting]);
+
     
     return(
         <>
-            <div className='w-full h-auto mt-24 flex flex-col items-center' id="proyectos">
-                <h2 className='text-3xl font-baskerville text-white text-center mb-4'>Proyectos</h2>
-                <div className='w-full h-auto flex flex-col items-center justify-center md:flex-row md:gap-10 md:flex-wrap'>
+            <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center' id="proyectos">
+            <div className='transition ease-in duration-500  opacity-0'>
+                <h2 className='text-3xl font-baskerville text-white text-center mb-4 '>Proyectos</h2>
+            </div>
+                <div className='w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap'>
+                    
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-lg'>
                         <a href="https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-bootstrap-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
