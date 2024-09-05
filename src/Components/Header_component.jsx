@@ -7,7 +7,7 @@ const Header_component = () => {
     return (
         <>
             <div className='w-full h-lvh flex flex-col text-center items-center justify-center' id="header">
-            <div className='w-72 h-72  rounded-full flex flex-col mb-6 items-center  justify-center overflow-hidden'>
+            <div className='w-72 h-72  rounded-full flex flex-col mb-6 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20'>
                 <img src={MePhoto} alt="Me" className='w-60 '/>
             </div>
                 <h1 className='font-baskerville text-7xl text-white'>Axel Westman</h1>
