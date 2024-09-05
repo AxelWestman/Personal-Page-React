@@ -48,10 +48,10 @@ const Technologies_component = () => {
     return(
             <>
                 <div ref={ref} className='w-full h-96 flex flex-col items-center justify-center' id="tecnologias">
-                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col'>
+                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col md:max-w-[60rem]'>
                         <h2 className='text-center text-white text-3xl font-baskerville'>Tecnologías</h2>
-                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-4 md:w-1/2'>
-                            <img src={figma_logo} alt="figma logo" className='w-20'/>
+                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-4 md:w-1/2  '>
+                            <img src={figma_logo} alt="figma logo" className='w-20 '/>
                             <img src={html_photo} alt="html logo" className='w-20' />
                             <img src={css_photo} alt="css logo" className='w-20' />
                             <img src={javascript_logo} alt="javascript logo" className='w-20'/>

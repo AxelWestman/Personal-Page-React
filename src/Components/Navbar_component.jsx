@@ -35,7 +35,7 @@ const Navbar_component = () => {
         </NavbarBrand>
         <NavbarItem>
           <a href="#header"  color="foreground" >
-            Home
+            Inicio
           </a>
         </NavbarItem>
         <NavbarItem>
@@ -70,7 +70,7 @@ const Navbar_component = () => {
 
       <NavbarMenu className='bg-gray-900 bg-opacity-60'>
         <ul>
-          <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header">Home</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header">Inicio</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#about">Sobre mi</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias">Tecnologías</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos">Proyectos</a></li>

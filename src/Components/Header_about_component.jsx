@@ -5,9 +5,11 @@ import About_component from './About_component';
 const Header_about_component = () =>{
     return(
         <>
-        <section className='flex flex-col md:flex-row'>
-            <Header_component />
-            <About_component />
+        <section className='w-full flex items-center justify-center'>
+            <div className='flex flex-col  md:flex-row md:max-w-[70rem]'>
+                <Header_component />
+                <About_component />
+            </div>
         </section>
         </>
     );
