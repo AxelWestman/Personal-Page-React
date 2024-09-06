@@ -1,8 +1,6 @@
 import React from  'react';
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import { Link as Enlace} from 'react-router-dom';
-
-
 import {AcmeLogo} from "./AcmeLogo";
 
 
@@ -20,7 +18,7 @@ const Navbar_component = () => {
 
     return(
         <>
-     <Navbar disableAnimation isBordered>
+     <Navbar disableAnimation isBordered id="barra">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
@@ -34,7 +32,7 @@ const Navbar_component = () => {
         <NavbarBrand>
         </NavbarBrand>
         <NavbarItem>
-          <a href="#header"  color="foreground" >
+          <a href="#first"  color="foreground" >
             Inicio
           </a>
         </NavbarItem>

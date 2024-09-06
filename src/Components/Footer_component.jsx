@@ -1,7 +1,7 @@
 import React from 'react';
-import Github_svg from '../assets/svg/github.svg';
-import Linkedin_svg from '../assets/svg/linkedin.svg';
-import Mail_svg from '../assets/svg/mail.svg';
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 const Footer_component = () => {
 
@@ -9,9 +9,9 @@ const Footer_component = () => {
         <>
             <div className='w-full h-32  flex items-center justify-center'>
                 <div className='flex items-center  justify-center gap-5'>
-                    <a href="https://github.com/AxelWestman" target='_blank'><img src={Github_svg} alt="github logo" className='w-10 opacity-75' /></a>
-                    <a href="https://linkedin.com/in/axel-westman-b4606a27b" target='_blank'><img src={Linkedin_svg} alt="linkedin logo" className='w-10 opacity-75' /></a>
-                    <a href="mailto:axelwestman@outlook.com"><img src={Mail_svg} alt="mail logo" className='w-10 opacity-75' /></a>
+                    <a href="https://github.com/AxelWestman" target='_blank'><FaGithub className='text-[2.6rem] text-black'/></a>
+                    <a href="https://linkedin.com/in/axel-westman-b4606a27b" target='_blank'><AiOutlineLinkedin className='text-5xl text-black '/></a>
+                    <a href="mailto:axelwestman@outlook.com"><IoIosMail  className='text-5xl text-black '/></a>
                 </div>
             </div>
         </>
