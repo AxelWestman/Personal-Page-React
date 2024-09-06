@@ -50,7 +50,7 @@ const Projects_component = () => {
     
     return(
         <>
-            <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center' id="proyectos">
+            <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center md:mt-12' >
             <div className='transition ease-in duration-500  opacity-0'>
                 <h2 className='text-3xl font-baskerville text-white text-center mb-4 '>Proyectos</h2>
             </div>
