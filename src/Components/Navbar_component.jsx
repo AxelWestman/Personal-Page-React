@@ -43,7 +43,7 @@ const Navbar_component = () => {
         </NavbarItem>
         <NavbarItem>
           <a href="#tecnologias" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
-            Tecnologías
+            Habilidades
           </a>
         </NavbarItem>
         <NavbarItem>
@@ -52,8 +52,8 @@ const Navbar_component = () => {
           </a>
         </NavbarItem>
         <NavbarItem>
-          <a href="#certificaciones" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
-            Títulos y Certificaciones
+          <a href="#contacto" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+            Contacto
           </a>
         </NavbarItem>
       </NavbarContent>
@@ -70,9 +70,9 @@ const Navbar_component = () => {
         <ul>
           <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Inicio</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#about" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Sobre mi</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Tecnologías</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Habilidades</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Proyectos</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#certificaciones"  className='font-poppins  font-medium leading-normal text-white text-[20px]' >Títulos y Certificaciones</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#contacto"  className='font-poppins  font-medium leading-normal text-white text-[20px]' >Contacto</a></li>
         </ul>
       </NavbarMenu>
     </Navbar>

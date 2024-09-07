@@ -9,7 +9,7 @@ import About_component from './Components/About_component';
 import Technologies_component from './Components/Technologies_component';
 import Footer_component from './Components/Footer_component';
 import Projects_component from './Components/Projects_component';
-import Certifications_component from './Components/Certifications_component';
+import Contact_component from './Components/Contact_component';
 import Header_about_component from './Components/Header_about_component';
 
 
@@ -23,7 +23,7 @@ function App() {
         <Header_about_component />
         <Technologies_component />
         <Projects_component />
-        <Certifications_component />
+        <Contact_component />
         <Footer_component />
     </Router>    
     </>

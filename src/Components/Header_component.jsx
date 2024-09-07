@@ -14,7 +14,7 @@ const Header_component = () => {
             <div className='w-72 h-72  rounded-full flex flex-col mb-4 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20 md:w-60 md:h-60'>
                 <img src={MePhoto} alt="Me" className='w-60 md:w-[12.4rem]'/>
             </div>
-                <h1 className='font-poppins font-bold  text-5xl text-white mb-2 md:mb-1'>Axel Westman</h1>
+                <h1 className='font-poppins font-bold  text-4xl text-white mb-2 md:mb-1 md:text-5xl'>&lt; Axel Westman /&gt;</h1>
                 <h3 className='font-poppins text-3xl text-cyan-400 float-left relative mb-2 md:mb-0'>
                     <Typewriter
                         options={{

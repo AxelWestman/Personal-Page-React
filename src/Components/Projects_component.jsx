@@ -52,9 +52,9 @@ const Projects_component = () => {
         <>
             <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center md:mt-12' >
             <div className='transition ease-in duration-500  opacity-0'>
-                <h2 className='text-3xl font-poppins text-white text-center mb-4 '>Proyectos</h2>
+                <h2 className='text-6xl font-poppins text-white text-center '>Proyectos</h2>
             </div>
-                <div className='w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
+                <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
                     
                     <div className='w-[345px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 transform transition duration-500 hover:scale-105'>
                         <a href="https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/" target='_blank' className='w-full'>

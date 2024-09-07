@@ -49,9 +49,8 @@ const Technologies_component = () => {
             <>
                 <div ref={ref} className='w-full h-96 flex flex-col items-center justify-center mt-5 md:mt-0' id="tecnologias">
                     <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col md:max-w-[60rem]'>
-                        <h2 className='text-center text-white text-3xl font-poppins'>Tecnologías</h2>
-                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-4 md:w-1/2  '>
-                            <img src={figma_logo} alt="figma logo" className='w-20 '/>
+                        <h2 className='text-center text-white text-6xl font-poppins'>Habilidades</h2>
+                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-6 md:w-1/2  '>
                             <img src={html_photo} alt="html logo" className='w-20' />
                             <img src={css_photo} alt="css logo" className='w-20' />
                             <img src={javascript_logo} alt="javascript logo" className='w-20'/>
@@ -62,7 +61,8 @@ const Technologies_component = () => {
                             <img src={react_logo} alt="react logo" className='w-20'/>
                             <img src={tailwind_logo} alt="tailwind logo" className='w-20'/>
                             <img src={bootstrap_logo} alt="bootstrap logo" className='w-20'/>
-                            <img src={git_logo} alt="git logo" className='w-20' />
+                            <img src={git_logo} alt="git logo" className='w-16' />
+                            <img src={figma_logo} alt="figma logo" className='w-[4.5rem] mt-2 ml-1'/>
                         </div>
                         <div id="proyectos"></div>
                     </div>
