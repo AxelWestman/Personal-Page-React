@@ -27,6 +27,7 @@ module.exports = {
       },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],
+          poppins:["Poppins", "sans-serif"],
       },
       colors:{
         

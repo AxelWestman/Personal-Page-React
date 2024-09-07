@@ -52,7 +52,7 @@ const Projects_component = () => {
         <>
             <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center md:mt-12' >
             <div className='transition ease-in duration-500  opacity-0'>
-                <h2 className='text-3xl font-baskerville text-white text-center mb-4 '>Proyectos</h2>
+                <h2 className='text-3xl font-poppins text-white text-center mb-4 '>Proyectos</h2>
             </div>
                 <div className='w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
                     
@@ -66,7 +66,7 @@ const Projects_component = () => {
                         
                             </div>
                         </a>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Bootstrap</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -81,7 +81,7 @@ const Projects_component = () => {
                                 </div>
                             </div>
                         </a>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Tailwind</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -97,7 +97,7 @@ const Projects_component = () => {
                                 </div>
                             </div>
                         </a>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>React</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -110,7 +110,7 @@ const Projects_component = () => {
                                 <img src={php_logo} alt="php logo" className='w-10' />
                             </div>
                         </div>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>PHP</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -126,7 +126,7 @@ const Projects_component = () => {
                                 </div>
                             </div>
                         </a>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>React</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -140,7 +140,7 @@ const Projects_component = () => {
                                 <img src={react_logo} alt="react logo" className='w-10' />
                             </div>
                         </div>
-                        <div className='p-3'>
+                        <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>React</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
@@ -148,7 +148,7 @@ const Projects_component = () => {
 
                 </div>
                 <a href="https://github.com/AxelWestman" target='_blank'>
-                    <div className='w-36 h-14 bg-gray-700 text-white font-baskerville rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 transform transition duration-500 hover:scale-105'>
+                    <div className='w-36 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 transform transition duration-500 hover:scale-105'>
                         <img src={github} alt="github logo" className='w-9'/>
                         <h2 className='text-xl mt-1'>Ver más</h2>
                     </div>
