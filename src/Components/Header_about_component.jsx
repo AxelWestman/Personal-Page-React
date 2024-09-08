@@ -6,7 +6,7 @@ const Header_about_component = () =>{
     return(
         <>
         <section className='w-full flex items-center justify-center ' id="first">
-            <div className='flex flex-col  md:flex-row md:max-w-[70rem]'>
+            <div className='flex flex-col  lg:flex-row lg:max-w-[70rem]'>
                 <Header_component />
                 <About_component />
             </div>

@@ -11,11 +11,11 @@ const Header_component = () => {
     return (
         <>
             <div className='w-full h-lvh flex flex-col text-center items-center justify-center' id="header">
-            <div className='w-72 h-72  rounded-full flex flex-col mb-4 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20 md:w-60 md:h-60'>
-                <img src={MePhoto} alt="Me" className='w-60 md:w-[12.4rem]'/>
+            <div className='w-56 h-56 newphones:w-72 newphones:h-72 rounded-full flex flex-col mb-4 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20 md:w-60 md:h-60'>
+                <img src={MePhoto} alt="Me" className='w-48 newphones:w-60 md:w-[12.4rem]'/>
             </div>
-                <h1 className='font-poppins font-bold  text-4xl text-white mb-2 md:mb-1 md:text-5xl'>&lt; Axel Westman /&gt;</h1>
-                <h3 className='font-poppins text-3xl text-cyan-400 float-left relative mb-2 md:mb-0'>
+                <h1 className='font-poppins font-bold text-3xl  newphones:text-4xl text-white mb-2 md:mb-1 md:text-5xl'>&lt; Axel Westman /&gt;</h1>
+                <h3 className='font-poppins text-2xl text-cyan-400 float-left relative mb-2 newphones:text-3xl md:mb-0'>
                     <Typewriter
                         options={{
                         autoStart: true,

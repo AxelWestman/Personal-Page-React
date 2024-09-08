@@ -8,6 +8,14 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}", 
     ],
   theme: {
+    screens: {
+      'newphones': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       animation: {
         'escribir' : 'escribir 5s steps(13) infinite alternate',
