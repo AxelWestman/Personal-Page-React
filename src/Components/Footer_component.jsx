@@ -7,7 +7,7 @@ const Footer_component = () => {
 
     return(
         <>
-            <div className='w-full h-10 flex items-center justify-center md:h-20 lg:h-14'>
+            <div className='w-full h-10  items-center justify-center hidden md:h-20 lg:h-14'>
                 <div className='flex items-center  justify-center gap-5'>
                     
                 </div>

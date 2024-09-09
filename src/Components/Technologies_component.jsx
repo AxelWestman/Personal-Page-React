@@ -47,7 +47,7 @@ const Technologies_component = () => {
 
     return(
             <>
-                <div ref={ref} className='w-full h-96 flex flex-col items-center justify-center mt-24 lg:mt-0' id="tecnologias">
+                <div ref={ref} className=' w-full h-[28rem]  flex flex-col items-center justify-center mt-24 lg:h-96 lg:mt-0 bg-[#111827]' id="tecnologias">
                     <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col md:max-w-[60rem]'>
                         <h2 className='text-center text-white text-5xl font-poppins md:text-6xl'>Habilidades</h2>
                         <div className='w-full h-auto flex flex-wrap items-center justify-center mt-6 md:w-1/2  '>

@@ -18,7 +18,7 @@ const Navbar_component = () => {
 
     return(
         <>
-     <Navbar disableAnimation isBordered id="barra" className='bg-[#0F172A] bg-opacity-45 '>
+     <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 '>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle className='text-slate-100' />
       </NavbarContent>
