@@ -33,7 +33,7 @@ const Navbar_component = () => {
 
     return(
         <>
-     <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 dark:bg-[#FFFFFF]'>
+     <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 dark:bg-[#FFFFFF] dark:bg-opacity-45'>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle className='text-slate-100 dark:text-[#030712]' />
       </NavbarContent>
@@ -82,14 +82,14 @@ const Navbar_component = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className='bg-gray-900 bg-opacity-60'>
+      <NavbarMenu className='bg-gray-900 bg-opacity-60 dark:bg-[#FFFFFF] dark:bg-opacity-60'>
         
         <ul>
-          <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Inicio</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#about" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Sobre mi</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Habilidades</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Proyectos</a></li>
-          <li className='text-3xl font-baskerville text-white mb-4'><a href="#contacto"  className='font-poppins  font-medium leading-normal text-white text-[20px]' >Contacto</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Inicio</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#about" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Sobre mi</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Habilidades</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Proyectos</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#contacto"  className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]' >Contacto</a></li>
         </ul>
       </NavbarMenu>
         
