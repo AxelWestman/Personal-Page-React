@@ -6,7 +6,9 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",  
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}", 
+    "./components/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: "class",
   theme: {
     screens: {
       'newphones': '375px',

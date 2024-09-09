@@ -47,10 +47,10 @@ const Technologies_component = () => {
 
     return(
             <>
-                <div ref={ref} className=' w-full h-[28rem]  flex flex-col items-center justify-center mt-24 lg:h-96 lg:mt-0 bg-[#111827]' id="tecnologias">
-                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 md:flex-col md:max-w-[60rem]'>
-                        <h2 className='text-center text-white text-5xl font-poppins md:text-6xl'>Habilidades</h2>
-                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-6 md:w-1/2  '>
+                <div ref={ref}  id="tecnologias" className=' w-full h-auto  flex flex-col items-center justify-center  lg:mt-0 bg-[#111827] dark:bg-slate-100'>
+                    <div className='w-4/5 h-auto flex flex-wrap items-center justify-center transition ease-in duration-500  opacity-0 mt-10 mb-10 md:flex-col md:max-w-[60rem]'>
+                        <h2 className='text-center text-white text-5xl font-poppins md:text-6xl dark:text-[#111827]'>Habilidades</h2>
+                        <div className='w-full h-auto flex flex-wrap items-center justify-center mt-6 md:w-1/2  ' >
                             <img src={html_photo} alt="html logo" className='w-20' />
                             <img src={css_photo} alt="css logo" className='w-20' />
                             <img src={javascript_logo} alt="javascript logo" className='w-20'/>

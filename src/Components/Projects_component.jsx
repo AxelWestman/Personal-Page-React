@@ -50,13 +50,13 @@ const Projects_component = () => {
     
     return(
         <>
-            <div ref={ref}  className='w-full h-auto mt-24 flex flex-col items-center lg:mt-12' >
-            <div className='transition ease-in duration-500  opacity-0'>
-                <h2 className='text-5xl font-poppins text-white text-center md:text-6xl'>Proyectos</h2>
+            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#030712] dark:bg-[#FFFFFF] ' >
+            <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
+                <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Proyectos</h2>
             </div>
                 <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
                     
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] '>
                         <a href="https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-bootstrap-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -71,7 +71,7 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
                         <a href="https://acme-rockets-7p76.onrender.com/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-tailwind-photo  bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-15 flex '>
@@ -86,7 +86,7 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
                         <a href="https://axelwestman.github.io/landing-page-react/build/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -102,7 +102,7 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
                         <div className='w-full h-48 bg-php-project bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                         <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
                                 <img src={html_photo} alt="html logo" className='w-10 ml-1' />
@@ -115,7 +115,7 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
                         <a href="https://axelwestman.github.io/spacex-missions/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-spacex bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -131,7 +131,7 @@ const Projects_component = () => {
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
                         <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                         <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
                                 <img src={html_photo} alt="html logo" className='w-10 ml-1' />
@@ -148,9 +148,9 @@ const Projects_component = () => {
 
                 </div>
                 <a href="https://github.com/AxelWestman" target='_blank'>
-                    <div className='w-36 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105'>
+                    <div className='mb-12 w-36 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 lg:mb-12 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] dark:bg-slate-500'>
                         <img src={github} alt="github logo" className='w-9'/>
-                        <h2 className='text-xl mt-1'>Ver más</h2>
+                        <h2 className='text-xl mt-1 dark:text-[#111827]'>Ver más</h2>
                     </div>
                 </a>
             </div>

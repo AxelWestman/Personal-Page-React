@@ -2,10 +2,25 @@ import React from  'react';
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import { Link as Enlace} from 'react-router-dom';
 import {AcmeLogo} from "./AcmeLogo";
+import { useState, useEffect } from 'react';
+import { FaMoon } from "react-icons/fa";
 
 
 const Navbar_component = () => {
 
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark"){
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
 
   const scrollToSection = (sectionId) => {
@@ -18,9 +33,9 @@ const Navbar_component = () => {
 
     return(
         <>
-     <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 '>
+     <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 dark:bg-[#FFFFFF]'>
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle className='text-slate-100' />
+        <NavbarMenuToggle className='text-slate-100 dark:text-[#030712]' />
       </NavbarContent>
 
       <NavbarContent className="sm:hidden pr-3 " justify="center">
@@ -32,27 +47,27 @@ const Navbar_component = () => {
         <NavbarBrand>
         </NavbarBrand>
         <NavbarItem>
-          <a href="#first"  color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+          <a href="#first"  color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Inicio
           </a>
         </NavbarItem>
         <NavbarItem>
-          <a href="#about" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+          <a href="#about" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Sobre mi
           </a>
         </NavbarItem>
         <NavbarItem>
-          <a href="#tecnologias" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+          <a href="#tecnologias" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Habilidades
           </a>
         </NavbarItem>
         <NavbarItem>
-          <a href="#proyectos" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+          <a href="#proyectos" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Proyectos
           </a>
         </NavbarItem>
         <NavbarItem>
-          <a href="#contacto" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px]'>
+          <a href="#contacto" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Contacto
           </a>
         </NavbarItem>
@@ -60,13 +75,15 @@ const Navbar_component = () => {
 
       <NavbarContent justify="end" className=''>
         <NavbarItem className="hidden lg:flex">
-          <Link>Login</Link>
+          
         </NavbarItem>
         <NavbarItem>
+        <button onClick={handleThemeSwitch}><FaMoon className='text-white dark:text-[#030712]' /></button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu className='bg-gray-900 bg-opacity-60'>
+        
         <ul>
           <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Inicio</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#about" className='font-poppins  font-medium leading-normal text-white text-[20px]'>Sobre mi</a></li>
@@ -75,6 +92,7 @@ const Navbar_component = () => {
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#contacto"  className='font-poppins  font-medium leading-normal text-white text-[20px]' >Contacto</a></li>
         </ul>
       </NavbarMenu>
+        
     </Navbar>
    
     </>
