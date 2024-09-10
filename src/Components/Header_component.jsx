@@ -11,7 +11,7 @@ const Header_component = () => {
     return (
         <>
             <div className='w-full h-lvh flex flex-col text-center items-center justify-center ' id="header">
-            <div className='w-56 h-56 newphones:w-72 newphones:h-72 rounded-full flex flex-col mb-4 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20 md:w-60 md:h-60 dark:shadow-[0_3px_10px_rgb(0,0,0,0.2)]  '>
+            <div className='w-56 h-56 newphones:w-72 newphones:h-72 rounded-full flex flex-col mb-4 items-center  justify-center overflow-hidden shadow-2xl shadow-blue-500/20 md:w-60 md:h-60 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                 <img src={MePhoto} alt="Me" className='w-48 newphones:w-60 md:w-[12.4rem]'/>
             </div>
                 <h1 className='font-poppins font-bold text-3xl  newphones:text-4xl text-white mb-2 md:mb-1 md:text-5xl dark:text-[#111827]'>&lt; Axel Westman /&gt;</h1>
