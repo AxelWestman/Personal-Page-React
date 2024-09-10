@@ -30,7 +30,7 @@ const Header_component = () => {
                         }}
                     />
                 </h3>
-                <div className='bg-white bg-opacity-5 w-44 h-12 mt-3 gap-2 rounded-3xl flex justify-center items-center shadow-2xl shadow-blue-500/20 md:h-10 dark:bg-slate-500'>
+                <div className='bg-white bg-opacity-5 w-44 h-12 mt-3 gap-2 rounded-3xl flex justify-center items-center shadow-2xl shadow-blue-500/20 md:h-10 dark:bg-slate-100 dark:bg-opacity-100 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                     <a href="https://github.com/AxelWestman" target='_blank'><FaGithub className='text-[2.4rem] text-slate-100 md:text-[1.9rem] dark:text-[#111827]'/></a>
                     <a href="https://linkedin.com/in/axel-westman-b4606a27b" target='_blank'><AiOutlineLinkedin className='text-5xl text-slate-100 md:text-4xl dark:text-[#111827]'/></a>
                     <a href="mailto:axelwestman@outlook.com"><IoIosMail  className='text-5xl text-slate-100 md:text-[2.50rem] dark:text-[#111827]'/></a>

@@ -4,6 +4,9 @@ import { Link as Enlace} from 'react-router-dom';
 import {AcmeLogo} from "./AcmeLogo";
 import { useState, useEffect } from 'react';
 import { FaMoon } from "react-icons/fa";
+import {Switch} from "@nextui-org/react";
+import {MoonIcon} from "./MoonIcon";
+import {SunIcon} from "./SunIcon";
 
 
 const Navbar_component = () => {
@@ -78,7 +81,16 @@ const Navbar_component = () => {
           
         </NavbarItem>
         <NavbarItem>
-        <button onClick={handleThemeSwitch}><FaMoon className='text-white dark:text-[#030712]' /></button>
+          <Switch onClick={handleThemeSwitch}
+            defaultSelected
+            size="lg"
+            color="secondary"
+            thumbIcon={({ isSelected, className }) =>
+              isSelected ? (
+            <SunIcon className={className} />
+            ) : (
+            <MoonIcon className={className} />)} >
+          </Switch>
         </NavbarItem>
       </NavbarContent>
 
