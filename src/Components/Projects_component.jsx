@@ -67,8 +67,8 @@ const Projects_component = () => {
                             </div>
                         </a>
                         <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Bootstrap</h2>
-                            <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
+                            <h2 className='text-2xl'>BuildCon</h2>
+                            <p className='mt-3'>Sitio web de una empresa ficticia (BuildCon), realizado con HTML y Bootstrap. Landing Page realizada para aplicar los conocimientos adquiridos sobre el framework Bootstrap, agilizando el proceso de añadir estilos.</p>
                         </div>
                     </div>
                     <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'>
@@ -82,7 +82,7 @@ const Projects_component = () => {
                             </div>
                         </a>
                         <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Tailwind</h2>
+                            <h2 className='text-2xl'>Acme Rockets</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const Projects_component = () => {
                             </div>
                         </a>
                         <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>React</h2>
+                            <h2 className='text-2xl'>FOODIE</h2>
                             <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
                         </div>
                     </div>
