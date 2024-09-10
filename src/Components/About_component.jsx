@@ -61,8 +61,8 @@ const About_component = () => {
                 <div  className='w-4/5 flex flex-col items-center transition ease-in duration-500  opacity-0 mb-12'>
                     <h2 className='text-center text-white text-5xl font-poppins lg:text-left dark:text-[#111827]'>Sobre mi</h2>
                     <p className='font-poppins font-medium text-[20px] leading-[180%] text-white mt-4 dark:text-[#111827]'>Soy un desarrollador Front-end de la ciudad de Santa Fe, Argentina.<br /> Formado en la "Universidad Nacional del Litoral" y con distintos cursos. Con un constante deseo de aprender, busco unirme a un equipo dinámico donde pueda aplicar mis habilidades y crecer profesionalmente.<br /> Soy comunicativo, proactivo y con una gran capacidad para adaptarme a nuevos desafíos. ¡Pongámonos en contacto!</p>
-                       <div className='mt-4 w-48 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:bg-slate-100 dark:text-[#111827] dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                       <PiReadCvLogoFill className='text-3xl'/>
+                       <div className='mt-4 w-48 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:bg-slate-100  dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                       <PiReadCvLogoFill className='text-3xl dark:text-[#111827]'/>
                         <h2 className='text-xl mt-1 dark:text-[#111827]'>Currículum</h2>
                     </div>
                 </div>
