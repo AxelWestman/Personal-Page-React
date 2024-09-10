@@ -88,6 +88,7 @@ const Projects_component = () => {
                         </div>
                     </div>
                     <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                    <a href="http://axel-westman.000.pe" target="_blank" className='w-full'>
                         <div className='w-full h-48 bg-php-project bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                         <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
                                 <img src={html_photo} alt="html logo" className='w-10 ml-1' />
@@ -95,6 +96,7 @@ const Projects_component = () => {
                                 <img src={php_logo} alt="php logo" className='w-10' />
                             </div>
                         </div>
+                        </a>
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Next MCU Movie</h2>
                             <p className='mt-3'>Sitio web realizado con HTML, CSS y PHP. Se llama a la API de "When is the next MCU film?" para obtener datos sobre la próxima película de Marvel. Datos como el poster, nombre, descripción de la película se muestran en pantalla.</p>
@@ -132,17 +134,19 @@ const Projects_component = () => {
                         </div>
                     </div>
                     <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                        <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                <img src={css_photo} alt="css logo" className='w-10' />
-                                <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                <img src={react_logo} alt="react logo" className='w-10' />
+                        <a href="https://axelwestman.github.io/CALCULATOR-REACT/" target='_blank' className='w-full' >
+                            <div className='w-full h-48 bg-calculator-react bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
+                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
+                                    <img src={css_photo} alt="css logo" className='w-10' />
+                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
+                                    <img src={react_logo} alt="react logo" className='w-10' />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>React</h2>
-                            <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae error praesentium est nisi, esse excepturi, impedit delectus blanditiis beatae quibusdam itaque iste quod culpa laudantium quisquam cum omnis quis voluptatum.</p>
+                            <h2 className='text-2xl'>Calculadora</h2>
+                            <p className='mt-3'>Calculadora con la cual se pueden realizar cálculos sencillos, como pueden ser la suma, resta, multiplicación y división. Realizada con HTML, CSS, JavaScript y React, implementando Hooks como "useState".</p>
                         </div>
                     </div>
 
