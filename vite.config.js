@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://www.axelwestman.dev/src/',
+  base: 'https://axelwestman.github.io/Personal-Page-React/',
 });
