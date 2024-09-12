@@ -35,7 +35,7 @@ const Work_component = () => {
 
       return (
         <>
-            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#030712] dark:bg-[#FFFFFF]' id="experiencia">
+            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100' id="experiencia">
                 <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
                     <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Experiencia</h2>
                 </div>
@@ -52,8 +52,8 @@ const Work_component = () => {
                             </div>
                         </a>
                         <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>SpaceX Launches</h2>
-                            <p className='mt-3'>Sitio web desarrollado con HTML, Tailwind, Javasacript y React.Se realiza un llamado a la API de SpaceX para recuperar información sobre los lanzamientos que se realizaron y si estos fueron exitosos (boton verde) o fallaron (boton rojo).</p>
+                            <h2 className='text-2xl'>Required App</h2>
+                            <p className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Sitio web realizado con HTML, CSS y JavaScript.</p>
                         </div>
                     </div>
                 </div>

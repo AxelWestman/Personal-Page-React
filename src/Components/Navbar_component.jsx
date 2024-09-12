@@ -37,7 +37,7 @@ const Navbar_component = () => {
     return(
         <>
      <Navbar disableAnimation isBordered id="barra" className='bg-[#030712] bg-opacity-45 dark:bg-[#FFFFFF] dark:bg-opacity-45'>
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="lg:hidden" justify="start">
         <NavbarMenuToggle className='text-slate-100 dark:text-[#030712]' />
       </NavbarContent>
 
@@ -46,7 +46,7 @@ const Navbar_component = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
         <NavbarBrand>
         </NavbarBrand>
         <NavbarItem>

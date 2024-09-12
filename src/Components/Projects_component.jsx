@@ -51,7 +51,7 @@ const Projects_component = () => {
     
     return(
         <>
-            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#030712] dark:bg-[#FFFFFF] ' >
+            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100 ' >
             <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
                 <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Proyectos</h2>
             </div>
