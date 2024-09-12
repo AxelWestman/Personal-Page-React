@@ -11,6 +11,7 @@ import Footer_component from './Components/Footer_component';
 import Projects_component from './Components/Projects_component';
 import Contact_component from './Components/Contact_component';
 import Header_about_component from './Components/Header_about_component';
+import Work_component from './Components/Work_component';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Router>
         <Navbar_component />
         <Header_about_component />
+        <Work_component />
         <Technologies_component />
         <Projects_component />
         <Contact_component />

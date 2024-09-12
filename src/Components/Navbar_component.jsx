@@ -60,6 +60,11 @@ const Navbar_component = () => {
           </a>
         </NavbarItem>
         <NavbarItem>
+          <a href="#experiencia" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
+            Experiencia
+          </a>
+        </NavbarItem>
+        <NavbarItem>
           <a href="#tecnologias" color="foreground" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#030712]'>
             Habilidades
           </a>
@@ -99,6 +104,7 @@ const Navbar_component = () => {
         <ul>
           <li className='text-3xl font-baskerville text-white mb-4 mt-5'><a href="#header" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Inicio</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#about" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Sobre mi</a></li>
+          <li className='text-3xl font-baskerville text-white mb-4'><a href="#experiencia" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Experiencia</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#tecnologias" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Habilidades</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#proyectos" className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]'>Proyectos</a></li>
           <li className='text-3xl font-baskerville text-white mb-4'><a href="#contacto"  className='font-poppins  font-medium leading-normal text-white text-[20px] dark:text-[#111827]' >Contacto</a></li>

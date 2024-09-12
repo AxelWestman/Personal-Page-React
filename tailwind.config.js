@@ -34,7 +34,8 @@ module.exports = {
         'react-photo': "url('/src/assets/images/react-photo.png')",
         'spacex': "url('/src/assets/images/spacex.png')",
         'php-project': "url('/src/assets/images/php_page.png')",
-        "calculator-react": "url('/src/assets/images/calculadora.png')"
+        "calculator-react": "url('/src/assets/images/calculadora.png')",
+        'dkl-page': "url('/src/assets/images/dkl.png')",
       },
       fontFamily:{
           baskerville:["Libre Baskerville", "serif"],
