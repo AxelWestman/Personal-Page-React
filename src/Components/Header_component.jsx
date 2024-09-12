@@ -35,6 +35,7 @@ const Header_component = () => {
                     <a href="https://linkedin.com/in/axel-westman-b4606a27b" target='_blank'><AiOutlineLinkedin className='text-5xl text-slate-100 md:text-4xl dark:text-[#111827]'/></a>
                     <a href="mailto:axelwestman@outlook.com"><IoIosMail  className='text-5xl text-slate-100 md:text-[2.50rem] dark:text-[#111827]'/></a>
                 </div>
+                <div id="about_two"></div>
             </div>
         </>
     );

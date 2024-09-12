@@ -35,7 +35,7 @@ const Work_component = () => {
 
       return (
         <>
-            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100' id="experiencia">
+            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100' >
                 <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
                     <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Experiencia</h2>
                 </div>
@@ -47,13 +47,12 @@ const Work_component = () => {
                                     <img src={html_photo} alt="html logo" className='w-10 ml-1' />
                                     <img src={css_photo} alt="css logo" className='w-10' />
                                     <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                    
                                 </div>
                             </div>
                         </a>
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Required App</h2>
-                            <p className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Sitio web realizado con HTML, CSS y JavaScript.</p>
+                            <p id="habilidades" className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Sitio web realizado con HTML, CSS y JavaScript.</p>
                         </div>
                     </div>
                 </div>

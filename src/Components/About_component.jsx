@@ -66,10 +66,11 @@ const About_component = () => {
                         <a href={ cv } target='_blank'>
                             <div className='mt-4 w-48 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:bg-slate-100  dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                                 <PiReadCvLogoFill className='text-3xl dark:text-[#111827]'/>
-                                <h2 className='text-xl mt-1 dark:text-[#111827]'>Currículum</h2>
+                                <h2 className='text-xl mt-1 dark:text-[#111827]' id="experiencia_mobile">Currículum</h2>
                             </div>
                         </a>
                 </div>
+                <div id="experiencia"></div>
             </div>
         </>
     );
