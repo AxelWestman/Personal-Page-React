@@ -15,7 +15,7 @@ const About_component = () => {
         const observer = new IntersectionObserver(([entry]) => {
                 setIsIntersecting(entry.isIntersecting);
               },
-              { rootMargin: "-400px" }
+              { rootMargin: "-150px" }
         );
         console.log(isIntersecting);
         observer.observe(ref.current);
