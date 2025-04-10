@@ -11,6 +11,7 @@ import figma_logo from '../assets/images/figma.png';
 import tailwind_logo from '../assets/images/tailwind.png';
 import bootstrap_logo from '../assets/images/bootstrap.png';
 import git_logo from '../assets/images/git.png';
+import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
 import { useState, useRef, useEffect} from 'react';
 
 
@@ -54,7 +55,7 @@ const Technologies_component = () => {
                             <img src={html_photo} alt="html logo" className='w-20' />
                             <img src={css_photo} alt="css logo" className='w-20' />
                             <img src={javascript_logo} alt="javascript logo" className='w-20'/>
-                            <img src={php_logo} alt="php logo" className='w-20'/>
+                            <img src={angular_logo} alt="angular logo" className='w-20'/>
                             <img src={mysql_logo} alt="mysql logo" className='w-20'/>
                             <img src={nodejs_logo} alt="nodejs logo" className='w-20'/>
                             <img src={typescript_logo} alt="typescript logo" className='w-20'/>

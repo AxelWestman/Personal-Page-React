@@ -2,6 +2,8 @@ import React from 'react';
 import html_photo from '../assets/images/html.png';
 import css_photo from '../assets/images/css.png';
 import javascript_logo from '../assets/images/javascript.png';
+import typescript_logo from '../assets/images/typescript.png';
+import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
 import { useState, useRef, useEffect} from 'react';
 
 const Work_component = () => {
@@ -40,7 +42,7 @@ const Work_component = () => {
                     <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Experiencia</h2>
                 </div>
                 <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
-                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                    <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                         <a href="https://rqapp.com.ar/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-dkl-page bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -52,7 +54,23 @@ const Work_component = () => {
                         </a>
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Required App</h2>
-                            <p id="habilidades" className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Sitio web realizado con HTML, CSS y JavaScript.</p>
+                            <p id="habilidades" className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Landing page realizada solamente con HTML, CSS y JavaScript.</p>
+                        </div>
+                    </div>
+                    <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                        <a href="https://rqapp.com.ar/" target='_blank' className='w-full'>
+                            <div className='w-full h-48 bg-dkl-page bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
+                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
+                                    <img src={css_photo} alt="css logo" className='w-10' />
+                                    <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
+                                    <img src={angular_logo} alt="angular logo" className='w-9 h-auto mt-1.5' />
+                                </div>
+                            </div>
+                        </a>
+                        <div className='p-3 font-poppins'>
+                            <h2 className='text-2xl'>Turnero Hospital San Roque</h2>
+                            <p id="habilidades" className='mt-3'>Turnero realizado en colaboración con la empresa Required App para el Hospital San Roque de Paraná. En la app se pueden cargar los turnos de hasta 6 médicos.</p>
                         </div>
                     </div>
                 </div>
