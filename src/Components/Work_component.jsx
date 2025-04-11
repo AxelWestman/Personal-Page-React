@@ -58,8 +58,8 @@ const Work_component = () => {
                         </div>
                     </div>
                     <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://rqapp.com.ar/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-dkl-page bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                        <a href="#" target='_blank' className='w-full'>
+                            <div className='w-full h-48 bg-[url(./assets/images/turnerosanroque.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
                                     <img src={html_photo} alt="html logo" className='w-10 ml-1' />
                                     <img src={css_photo} alt="css logo" className='w-10' />
