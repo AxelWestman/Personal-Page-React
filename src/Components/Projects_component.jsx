@@ -15,6 +15,8 @@ import css_photo from '../assets/images/css.png';
 import php_logo from '../assets/images/php.png';
 import spacex from '../assets/images/spacex.png';
 import github from '../assets/svg/github.svg';
+import typescript_logo from '../assets/images/typescript.png';
+import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
 import { FaGithub } from "react-icons/fa";
 import { useState, useRef, useEffect} from 'react';
 
@@ -57,6 +59,22 @@ const Projects_component = () => {
             </div>
                 <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
                 <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                    <a href="http://104.236.85.47/home" target="_blank" className='w-full'>
+                        <div className='w-full h-48 bg-[url(./assets/images/ecommerce.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                        <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
+                                <img src={html_photo} alt="html logo" className='w-10 ml-1' />
+                                <img src={css_photo} alt="css logo" className='w-10' />
+                                <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
+                                <img src={angular_logo} alt="angular logo" className='w-9 h-auto mt-1.5' />
+                            </div>
+                        </div>
+                        </a>
+                        <div className='p-3 font-poppins'>
+                            <h2 className='text-2xl'>E-commerce</h2>
+                            <p className='mt-3'>Sitio web e-commerce, realizado con HTML, CSS, TypeScript y Angular. Se pueden ver y seleccionar productos, agregarlos al carrito y realizar simulaciones de compra gracias a la implementación de Checkout Pro de MercadoPago.</p>
+                        </div>
+                    </div>
+                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                         <a href="https://axelwestman.github.io/spacex-missions/" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-spacex bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                                 <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -85,21 +103,6 @@ const Projects_component = () => {
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>Acme Rockets</h2>
                             <p className='mt-3'>Acme Rockets es una compañia ficticia que se encarga de crear cohetes. Su sitio web fue desarrollado con HTML, Tailwind y JavaScipt, con el objetivo de llevar a la aplicación los conocimientos adquiridos sobre el Framework Tailwind.</p>
-                        </div>
-                    </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                    <a href="http://axel-westman.000.pe" target="_blank" className='w-full'>
-                        <div className='w-full h-48 bg-php-project bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                        <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                <img src={css_photo} alt="css logo" className='w-10' />
-                                <img src={php_logo} alt="php logo" className='w-10' />
-                            </div>
-                        </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Next MCU Movie</h2>
-                            <p className='mt-3'>Sitio web realizado con HTML, CSS y PHP. Se llama a la API de "When is the next MCU film?" para obtener datos sobre la próxima película de Marvel. Datos como el poster, nombre, descripción de la película se muestran en pantalla.</p>
                         </div>
                     </div>
                     <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
