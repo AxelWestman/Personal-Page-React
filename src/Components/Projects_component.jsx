@@ -17,6 +17,8 @@ import spacex from '../assets/images/spacex.png';
 import github from '../assets/svg/github.svg';
 import typescript_logo from '../assets/images/typescript.png';
 import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
+import express_logo from '../assets/images/express.png';
+import mysql_logo from '../assets/images/mysql.png'
 import { FaGithub } from "react-icons/fa";
 import { useState, useRef, useEffect} from 'react';
 
@@ -59,6 +61,24 @@ const Projects_component = () => {
             </div>
                 <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
                 <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
+                        <a href="http://104.236.85.47:8081" target='_blank' className='w-full' >
+                            <div className='w-full h-48 bg-[url(./assets/images/administracion_app.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
+                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
+                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
+                                    <img src={css_photo} alt="css logo" className='w-10' />
+                                    <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
+                                    <img src={angular_logo} alt="react logo" className='w-10' />
+                                    <img src={express_logo} alt="express logo" className='w-9 h-auto mt-1.5 mb-1 ml-0.5' />
+                                    <img src={mysql_logo} alt="mysql logo" className='w-12 h-8 mt-1.5 ml-0.5' />
+                                </div>
+                            </div>
+                        </a>
+                        <div className='p-3 font-poppins'>
+                            <h2 className='text-2xl'>App Administración </h2>
+                            <p className='mt-3'>App para administrar el proyecto de e-commerce. Se puede ver, agregar, modificar, eliminar productos y gestionar pedidos. Realizado con HTML, CSS, TypeScript y Angular para el front-end, y Express y MySQL para el back-end.</p>
+                        </div>
+                    </div>
+                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                     <a href="http://104.236.85.47/home" target="_blank" className='w-full'>
                         <div className='w-full h-48 bg-[url(./assets/images/ecommerce.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
                         <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
@@ -66,12 +86,14 @@ const Projects_component = () => {
                                 <img src={css_photo} alt="css logo" className='w-10' />
                                 <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
                                 <img src={angular_logo} alt="angular logo" className='w-9 h-auto mt-1.5' />
+                                <img src={express_logo} alt="express logo" className='w-9 h-auto mt-1.5 mb-1 ml-0.5' />
+                                <img src={mysql_logo} alt="mysql logo" className='w-12 h-8 mt-1.5 ml-0.5' />
                             </div>
                         </div>
                         </a>
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>E-commerce</h2>
-                            <p className='mt-3'>Sitio web e-commerce, realizado con HTML, CSS, TypeScript y Angular. Se pueden ver y seleccionar productos, agregarlos al carrito y realizar simulaciones de compra gracias a la implementación de Checkout Pro de MercadoPago.</p>
+                            <p className='mt-3'>E-commerce, hecho con HTML, CSS, TypeScript y Angular para el front-end, y Express y MySQL para el back-end. Se pueden ver productos, agregarlos al carrito y realizar simulaciones de compra gracias a la implementación de Checkout Pro de MercadoPago.</p>
                         </div>
                     </div>
                 <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
@@ -133,26 +155,9 @@ const Projects_component = () => {
                         </a>
                         <div className='p-3 font-poppins'>
                             <h2 className='text-2xl'>FOODIE</h2>
-                            <p className='mt-3'>FOODIE es una cadena de comidas ficticia. Su página web fue hecha con HTML, CSS, JavaScript y React.Este proyecto fue realizado para poner en práctica lo aprendido con React, dando un salto de JavaScript vanilla a una biblioteca/librería.</p>
+                            <p className='mt-3'>FOODIE es una cadena de comidas ficticia. Su página web fue hecha con HTML, CSS, JavaScript y React. Este proyecto fue realizado para poner en práctica lo aprendido con React, dando un salto de JavaScript vanilla a una biblioteca/librería.</p>
                         </div>
                     </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://axelwestman.github.io/CALCULATOR-REACT/" target='_blank' className='w-full' >
-                            <div className='w-full h-48 bg-calculator-react bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={css_photo} alt="css logo" className='w-10' />
-                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                    <img src={react_logo} alt="react logo" className='w-10' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Calculadora</h2>
-                            <p className='mt-3'>Calculadora con la cual se pueden realizar cálculos sencillos, como pueden ser la suma, resta, multiplicación y división. Realizada con HTML, CSS, JavaScript y React, implementando Hooks como "useState".</p>
-                        </div>
-                    </div>
-
                 </div>
                 <a href="https://github.com/AxelWestman" target='_blank'>
                     <div className='mb-12 w-36 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-2 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 lg:mb-12 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] dark:bg-slate-100'>
