@@ -41,7 +41,9 @@ const Work_component = () => {
                 <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
                     <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Experiencia</h2>
                 </div>
-                <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
+                <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-column md:gap-10 md:flex-wrap md:max-w-[70rem]'>
+                <h3 className='text-xl font-poppins text-white text-center md:text-xl dark:text-[#030712]'>-Prestando servico para Required App desde 2024</h3>
+                <div className="w-full h-auto flex flex-col items-center mt-8 lg:flex lg:flex-row lg:gap-10 lg:justify-center">
                 <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
                         <a href="#" target='_blank' className='w-full'>
                             <div className='w-full h-48 bg-[url(./assets/images/turnerosanroque.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
@@ -73,6 +75,7 @@ const Work_component = () => {
                             <p id="habilidades" className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Landing page realizada solamente con HTML, CSS y JavaScript.</p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </>
