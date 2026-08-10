@@ -1,80 +1,44 @@
-import React from  'react';
-import { useState, useRef, useEffect} from 'react';
+import React from 'react';
 import { PiReadCvLogoFill } from "react-icons/pi";
 import cv from "../assets/docs/Axel_Westman_CV.pdf";
 
-
-
 const About_component = () => {
+  return (
+    <section className="w-full min-h-dvh flex flex-col items-center justify-center lg:items-start lg:pl-8 pb-16" id="about">
+      <div className="w-full max-w-xl px-6 lg:px-0">
+        <span className="font-body text-sm tracking-widest uppercase text-accent mb-4 block">
+          Acerca de
+        </span>
 
-    const [isIntersecting, setIsIntersecting] = useState(false);
+        <h2 className="font-display font-bold text-4xl xs:text-5xl md:text-6xl text-text-primary dark:text-stone-800 tracking-tight mb-8 text-balance">
+          Sobre mi
+        </h2>
 
-    const ref = useRef(null);
+        <p className="font-body text-text-secondary dark:text-stone-600 leading-relaxed text-[17px] space-y-4 mb-3 max-w-prose text-balance">
+          Recibido bajo el título de "Técnico Universitario en Informática aplicada al Diseño Multimedia y de Sitios Web" en la Universidad Nacional del Litoral.
+        </p>
+        <p className="font-body text-text-secondary dark:text-stone-600 leading-relaxed text-[17px] mb-4 max-w-prose text-balance">
+          Soy un desarrollador Front-end con conocimientos en Back-end de la ciudad de Santa Fe, Argentina. Con un constante deseo de aprender, busco unirme a un equipo dinámico donde pueda aplicar mis habilidades y crecer profesionalmente.
+        </p>
+        <p className="font-body text-text-secondary dark:text-stone-600 leading-relaxed text-[17px] mb-10 max-w-prose text-balance">
+          Comunicativo, proactivo y con una gran capacidad para adaptarme a nuevos desafíos. ¡Pongámonos en contacto!
+        </p>
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-              },
-              { rootMargin: "-150px" }
-        );
-        console.log(isIntersecting);
-        observer.observe(ref.current);
-        
-        return () => observer.disconnect();
-      }, [isIntersecting]);
+        <a
+          href={cv}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-6 py-3 bg-accent text-white font-body font-medium rounded-xl transition-all duration-300 hover:bg-accent-light active:scale-[0.98] focus-visible:outline-accent"
+          id="experiencia_mobile"
+        >
+          <PiReadCvLogoFill className="text-xl" />
+          Currículum
+        </a>
+      </div>
 
-      useEffect(() => {
-        if (isIntersecting) {
-          const firstDiv = ref.current.querySelector("div"); // Seleccionamos el primer div
-      
-          if (firstDiv) {
-            firstDiv.classList.add("translate-y-[-0%]");
-            firstDiv.classList.add("slide-in");
-            firstDiv.classList.remove("opacity-0");
-          }
-        }
-      }, [isIntersecting]);
-
-
-    /*const [observer, setElements, entries] = useObserver({
-        threshold: 0.75,
-        root: null,
-    });
-
-    useEffect(() => {
-        const images = document.querySelectorAll(".lazy");
-        setElements(images);
-    }, [setElements]);
-
-    useEffect(function(){
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                const lazyImage = entry.target;
-                lazyImage.src = lazyImage.dataset.src;
-                lazyImage.classList.remove("lazy");
-                observer.unobserve(lazyImage);
-            }
-        });
-    }, [entries, observer]);*/
-
-    return (
-        <>
-            <div ref={ref} className='w-full h-auto flex flex-col items-center justify-center lg:min-h-lvh' id="about">
-                <div  className='w-4/5 flex flex-col items-center transition ease-in duration-500  opacity-0 mb-12'>
-                    <h2 className='text-center text-white text-5xl font-poppins lg:text-left dark:text-[#111827] lg:mt-5'>Sobre mi</h2>
-                    <p className='font-poppins font-medium text-[20px] leading-[180%] text-white mt-4 dark:text-[#111827]'>Recibido bajo el título de "Técnico Universitario en Informática aplicada al Diseño Multimedia y de Sitios Web" en la "Universidad Nacional del Litoral", Soy un desarrollador Front-end con conocimientos en Back-end de la ciudad de Santa Fe, Argentina.<br />Con un constante deseo de aprender, busco unirme a un equipo dinámico donde pueda aplicar mis habilidades y crecer profesionalmente.<br /> Soy comunicativo, proactivo y con una gran capacidad para adaptarme a nuevos desafíos. ¡Pongámonos en contacto!</p>
-                        <a href={ cv } target='_blank'>
-                            <div className='mt-4 w-48 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-3 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:bg-slate-100  dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                                <PiReadCvLogoFill className='text-3xl dark:text-[#111827]'/>
-                                <h2 className='text-xl mt-1 dark:text-[#111827]' id="experiencia_mobile">Currículum</h2>
-                            </div>
-                        </a>
-                </div>
-                <div id="experiencia"></div>
-            </div>
-        </>
-    );
-
-}
+      <div id="experiencia" />
+    </section>
+  );
+};
 
 export default About_component;

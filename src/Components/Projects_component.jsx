@@ -1,173 +1,82 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
-import Bootstrap_page from '../assets/images/bootstrap_page.png';
-import Tailwind_page from '../assets/images/tailwind-project.png';
 import html_photo from '../assets/images/html.png';
-import bootstrap_logo from '../assets/images/bootstrap.png';
-import tailwind_logo from '../assets/images/tailwind.png';
-import javascript_logo from '../assets/images/javascript.png';
-import react_logo from '../assets/images/react.png';
 import css_photo from '../assets/images/css.png';
-import php_logo from '../assets/images/php.png';
-import spacex from '../assets/images/spacex.png';
-import github from '../assets/svg/github.svg';
+import javascript_logo from '../assets/images/javascript.png';
 import typescript_logo from '../assets/images/typescript.png';
+import react_logo from '../assets/images/react.png';
+import tailwind_logo from '../assets/images/tailwind.png';
+import bootstrap_logo from '../assets/images/bootstrap.png';
 import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
 import express_logo from '../assets/images/express.png';
-import mysql_logo from '../assets/images/mysql.png'
-import { FaGithub } from "react-icons/fa";
-import { useState, useRef, useEffect} from 'react';
-
-
+import mysql_logo from '../assets/images/mysql.png';
+import { useLang } from '../i18n/LanguageContext';
 
 const Projects_component = () => {
+  const { t } = useLang();
 
-    const [isIntersecting, setIsIntersecting] = useState(false);
+  const projects = [
+    { title: 'App Administración', desc: t('projects.project1_desc'), techs: [html_photo, css_photo, typescript_logo, angular_logo, express_logo, mysql_logo], link: 'http://104.236.85.47:8081', accent: 'vermilion' },
+    { title: 'E-commerce', desc: t('projects.project2_desc'), techs: [html_photo, css_photo, typescript_logo, angular_logo, express_logo, mysql_logo], link: 'http://104.236.85.47/home', accent: 'electric' },
+    { title: 'SpaceX Launches', desc: t('projects.project3_desc'), techs: [html_photo, tailwind_logo, javascript_logo, react_logo], link: 'https://axelwestman.github.io/spacex-missions/', accent: 'vermilion' },
+    { title: 'Acme Rockets', desc: t('projects.project4_desc'), techs: [html_photo, tailwind_logo, javascript_logo], link: 'https://acme-rockets-7p76.onrender.com/', accent: 'solar' },
+    { title: 'BuildCon', desc: t('projects.project5_desc'), techs: [html_photo, bootstrap_logo], link: 'https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/', accent: 'electric' },
+    { title: 'FOODIE', desc: t('projects.project6_desc'), techs: [html_photo, css_photo, javascript_logo, react_logo], link: 'https://axelwestman.github.io/landing-page-react/build/', accent: 'vermilion' },
+  ];
 
-    const ref = useRef(null);
+  const accentColors = {
+    vermilion: 'border-l-vermilion',
+    electric: 'border-l-electric',
+    solar: 'border-l-solar',
+  };
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-              },
-              { rootMargin: "-150px" }
-        );
-        console.log(isIntersecting);
-        observer.observe(ref.current);
-        
-        return () => observer.disconnect();
-      }, [isIntersecting]);
+  return (
+    <section className="py-24 lg:py-32">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-12">
+        <div className="flex items-baseline gap-4 mb-16">
+          <span className="font-label text-[10px] tracking-[0.3em] text-ink-muted">04</span>
+          <span className="font-label text-xs tracking-[0.3em] uppercase text-vermilion">{t('projects.title')}</span>
+        </div>
 
-      useEffect(() => {
-        if (isIntersecting) {
-            ref.current.querySelectorAll("div").forEach((el) => {
-                el.classList.add("translate-y-[-0%]")
-                el.classList.add("slide-in");
-                el.classList.remove("opacity-0");
-            });
-        }
-      }, [isIntersecting]);
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {projects.map((project, i) => (
+            <a
+              key={i}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group block p-6 border-2 border-transparent border-l-3 ${accentColors[project.accent]} bg-surface-gray hover:bg-cream hover:border-ink transition-all duration-200`}
+            >
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-ink group-hover:text-vermilion transition-colors">
+                {project.title}
+              </h3>
+              <p className="font-mono text-xs text-ink-muted mt-3 leading-relaxed max-w-md">
+                {project.desc}
+              </p>
+              <div className="flex items-center gap-1.5 mt-4">
+                {project.techs.map((tech, idx) => (
+                  <img key={idx} src={tech} alt="" className="w-5 h-5 object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
+                ))}
+              </div>
+              <span className="font-mono text-[10px] text-ink-muted/50 mt-3 inline-block group-hover:text-ink-muted transition-colors">
+                {project.link.replace(/^https?:\/\//, '').split('/')[0]} &rarr;
+              </span>
+            </a>
+          ))}
+        </div>
 
-    
-    return(
-        <>
-            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100 ' >
-            <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
-                <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Proyectos</h2>
-            </div>
-                <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-row md:gap-10 md:flex-wrap md:max-w-[70rem]'>
-                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="http://104.236.85.47:8081" target='_blank' className='w-full' >
-                            <div className='w-full h-48 bg-[url(./assets/images/administracion_app.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={css_photo} alt="css logo" className='w-10' />
-                                    <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
-                                    <img src={angular_logo} alt="react logo" className='w-10' />
-                                    <img src={express_logo} alt="express logo" className='w-9 h-auto mt-1.5 mb-1 ml-0.5' />
-                                    <img src={mysql_logo} alt="mysql logo" className='w-12 h-8 mt-1.5 ml-0.5' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>App Administración </h2>
-                            <p className='mt-3'>App para administrar el proyecto de e-commerce. Se puede ver, agregar, modificar, eliminar productos y gestionar pedidos. Realizado con HTML, CSS, TypeScript y Angular para el front-end, y Express y MySQL para el back-end.</p>
-                        </div>
-                    </div>
-                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                    <a href="http://104.236.85.47/home" target="_blank" className='w-full'>
-                        <div className='w-full h-48 bg-[url(./assets/images/ecommerce.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                        <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                <img src={css_photo} alt="css logo" className='w-10' />
-                                <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
-                                <img src={angular_logo} alt="angular logo" className='w-9 h-auto mt-1.5' />
-                                <img src={express_logo} alt="express logo" className='w-9 h-auto mt-1.5 mb-1 ml-0.5' />
-                                <img src={mysql_logo} alt="mysql logo" className='w-12 h-8 mt-1.5 ml-0.5' />
-                            </div>
-                        </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>E-commerce</h2>
-                            <p className='mt-3'>E-commerce, hecho con HTML, CSS, TypeScript y Angular para el front-end, y Express y MySQL para el back-end. Se pueden ver productos, agregarlos al carrito y realizar simulaciones de compra gracias a la implementación de Checkout Pro de MercadoPago.</p>
-                        </div>
-                    </div>
-                <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://axelwestman.github.io/spacex-missions/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-spacex bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={tailwind_logo} alt="tailwind logo" className='w-10 object-contain' />
-                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                    <img src={react_logo} alt="react logo" className='w-10' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>SpaceX Launches</h2>
-                            <p className='mt-3'>Sitio web desarrollado con HTML, Tailwind, Javasacript y React.Se realiza un llamado a la API de SpaceX para recuperar información sobre los lanzamientos que se realizaron y si estos fueron exitosos (boton verde) o fallaron (boton rojo).</p>
-                        </div>
-                    </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://acme-rockets-7p76.onrender.com/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-tailwind-photo  bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-15 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={tailwind_logo} alt="tailwind logo" className='w-10 object-contain' />
-                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Acme Rockets</h2>
-                            <p className='mt-3'>Acme Rockets es una compañia ficticia que se encarga de crear cohetes. Su sitio web fue desarrollado con HTML, Tailwind y JavaScipt, con el objetivo de llevar a la aplicación los conocimientos adquiridos sobre el Framework Tailwind.</p>
-                        </div>
-                    </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-bootstrap-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={bootstrap_logo} alt="bootstrap logo" className='w-10 ' />
-                                </div>
-                        
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>BuildCon</h2>
-                            <p className='mt-3'>Sitio web de una empresa ficticia (BuildCon), realizado con HTML y Bootstrap. Landing Page realizada para aplicar los conocimientos adquiridos sobre el framework Bootstrap, agilizando el proceso de añadir estilos y no usar CSS vanilla.</p>
-                        </div>
-                    </div>
-                    <div className='w-11/12 md:w-[340px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://axelwestman.github.io/landing-page-react/build/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-react-photo bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={css_photo} alt="css logo" className='w-10' />
-                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                    <img src={react_logo} alt="react logo" className='w-10' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>FOODIE</h2>
-                            <p className='mt-3'>FOODIE es una cadena de comidas ficticia. Su página web fue hecha con HTML, CSS, JavaScript y React. Este proyecto fue realizado para poner en práctica lo aprendido con React, dando un salto de JavaScript vanilla a una biblioteca/librería.</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://github.com/AxelWestman" target='_blank'>
-                    <div className='mb-12 w-36 h-14 bg-gray-700 text-white font-poppins rounded-md flex justify-center items-center gap-2 shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 lg:mb-12 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] dark:bg-slate-100'>
-                        <FaGithub className='text-3xl text-slate-100 md:text-[1.9rem] dark:text-[#111827]'/>
-                        <h2 className='text-xl mt-1 dark:text-[#111827]'>Ver más</h2>
-                    </div>
-                </a>
-            </div>
-        </>
-    );
-}
+        <div className="mt-12">
+          <a
+            href="https://github.com/AxelWestman"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 font-mono text-sm text-ink border-2 border-ink px-5 py-2.5 hover:bg-ink hover:text-cream transition-all duration-200"
+          >
+            github.com/AxelWestman &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Projects_component;

@@ -4,82 +4,79 @@ import css_photo from '../assets/images/css.png';
 import javascript_logo from '../assets/images/javascript.png';
 import typescript_logo from '../assets/images/typescript.png';
 import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
-import { useState, useRef, useEffect} from 'react';
+import react_logo from '../assets/images/react.png';
+import nodejs_logo from '../assets/images/nodejs.png';
+import mysql_logo from '../assets/images/mysql.png';
+import { useLang } from '../i18n/LanguageContext';
 
 const Work_component = () => {
+  const { t } = useLang();
 
-    const [isIntersecting, setIsIntersecting] = useState(false);
+  const entries = [
+    {
+      year: t('experience.entry1_year'),
+      title: 'Required App',
+      subtitle: 'Front-end Developer',
+      description: t('experience.entry1_desc'),
+      link: 'https://rqapp.com.ar/',
+      techs: [html_photo, css_photo, javascript_logo, typescript_logo, angular_logo],
+      color: 'border-l-vermilion',
+    },
+    {
+      year: t('experience.entry2_year'),
+      title: 'Crombie',
+      subtitle: 'Full Stack Developer',
+      description: t('experience.entry2_desc'),
+      link: '#',
+      techs: [react_logo, typescript_logo, nodejs_logo, mysql_logo],
+      color: 'border-l-electric',
+    },
+  ];
 
-    const ref = useRef(null);
+  return (
+    <section className="py-24 lg:py-32">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-12">
+        <div className="flex items-baseline gap-4 mb-16">
+          <span className="font-label text-[10px] tracking-[0.3em] text-ink-muted">02</span>
+          <span className="font-label text-xs tracking-[0.3em] uppercase text-vermilion">{t('experience.title')}</span>
+        </div>
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-              },
-              { rootMargin: "-150px" }
-        );
-        console.log(isIntersecting);
-        observer.observe(ref.current);
-        
-        return () => observer.disconnect();
-      }, [isIntersecting]);
-
-      useEffect(() => {
-        if (isIntersecting) {
-            ref.current.querySelectorAll("div").forEach((el) => {
-                el.classList.add("translate-y-[-0%]")
-                el.classList.add("slide-in");
-                el.classList.remove("opacity-0");
-            });
-        }
-      }, [isIntersecting]);
-
-
-      return (
-        <>
-            <div ref={ref}  className='w-full h-auto  flex flex-col items-center justify-center bg-[#111827] dark:bg-slate-100' >
-                <div className='transition ease-in duration-500  opacity-0 mt-10 lg:mt-12'>
-                    <h2 className='text-5xl font-poppins text-white text-center md:text-6xl dark:text-[#030712]'>Experiencia</h2>
-                </div>
-                <div className='mt-8 w-full h-auto flex flex-col items-center justify-center transition ease-in duration-500  opacity-0 md:flex-column md:gap-10 md:flex-wrap md:max-w-[70rem]'>
-                <h3 className='text-xl font-poppins text-white text-center md:text-xl dark:text-[#030712]'>-Prestando servico para Required App desde 2024</h3>
-                <div className="w-full h-auto flex flex-col items-center mt-8 lg:flex lg:flex-row lg:gap-10 lg:justify-center">
-                <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="#" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-[url(./assets/images/turnerosanroque.png)] bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={css_photo} alt="css logo" className='w-10' />
-                                    <img src={typescript_logo} alt="typescript logo" className='w-10 h-8 mt-1.5' />
-                                    <img src={angular_logo} alt="angular logo" className='w-9 h-auto mt-1.5' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Turnero Hospital San Roque</h2>
-                            <p id="habilidades" className='mt-3'>Turnero realizado en colaboración con la empresa Required App para el Hospital San Roque de Paraná. En la app se pueden cargar los turnos de hasta 6 médicos.</p>
-                        </div>
-                    </div>
-                    <div className='w-11/12 md:w-[370px] mb-10 bg-gray-700 flex flex-col justify-center items-center rounded-md text-white shadow-2xl shadow-blue-500/20 md:transform md:transition md:duration-500 md:hover:scale-105 dark:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]'>
-                        <a href="https://rqapp.com.ar/" target='_blank' className='w-full'>
-                            <div className='w-full h-48 bg-dkl-page bg-cover bg-no-repeat bg-center rounded-t-md flex flex-col justify-end'>
-                                <div className='w-full bg-gray-500 h-10 bg-opacity-50 flex '>
-                                    <img src={html_photo} alt="html logo" className='w-10 ml-1' />
-                                    <img src={css_photo} alt="css logo" className='w-10' />
-                                    <img src={javascript_logo} alt="javascript logo" className='w-10' />
-                                </div>
-                            </div>
-                        </a>
-                        <div className='p-3 font-poppins'>
-                            <h2 className='text-2xl'>Required App</h2>
-                            <p id="habilidades" className='mt-3'>Primer trabajo Freelance realizado en 2023 para la empresa Required App. Landing page realizada solamente con HTML, CSS y JavaScript.</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
+        <div className="relative pl-8 lg:pl-12 border-l-2 border-ink/10">
+          {entries.map((entry, i) => (
+            <div key={i} className={`mb-16 last:mb-0 pl-6 border-l-3 ${entry.color} -ml-px`}>
+              <span className="font-mono text-xs text-ink-muted tracking-widest">
+                {entry.year}
+              </span>
+              <h3 className="font-display font-bold text-2xl sm:text-3xl text-ink mt-2">
+                {entry.title}
+              </h3>
+              <p className="font-mono text-xs text-ink-muted/60 mt-0.5">
+                {entry.subtitle}
+              </p>
+              <p className="font-mono text-sm text-ink-light mt-3 max-w-xl leading-relaxed">
+                {entry.description}
+              </p>
+              <div className="flex items-center gap-2 mt-4">
+                {entry.techs.map((tech, idx) => (
+                  <img key={idx} src={tech} alt="" className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                ))}
+              </div>
+              {entry.link !== '#' && (
+                <a href={entry.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-mono text-xs text-ink-muted border-b border-ink-muted/30 hover:text-ink hover:border-ink transition-all">
+                  {entry.link.replace('https://', '')}
+                </a>
+              )}
             </div>
-        </>
-      )
+          ))}
+        </div>
+
+        <p className="font-mono text-xs text-ink-muted mt-10 italic">
+          {t('experience.footer')}
+        </p>
+      </div>
+      <div id="habilidades" className="h-0" />
+    </section>
+  );
 };
 
 export default Work_component;
