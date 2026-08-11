@@ -1,27 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-cream text-ink font-mono antialiased;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "ss02", "ss03", "cv06";
+    @apply bg-bg text-text font-body antialiased overflow-x-hidden;
+    image-rendering: pixelated;
   }
 
-  ::selection {
-    @apply bg-vermilion text-cream;
-  }
+  ::selection { @apply bg-yellow/30 text-yellow; }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .scanlines {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
   }
+
+  .pixel-border {
+    border: 3px solid;
+    @apply border-gold;
+    box-shadow:
+      3px 0 0 0 theme('colors.gold'),
+      -3px 0 0 0 theme('colors.gold'),
+      0 3px 0 0 theme('colors.gold'),
+      0 -3px 0 0 theme('colors.gold');
+  }
+
+  .pixel-border-sm {
+    border: 2px solid;
+    @apply border-gold/60;
+    box-shadow:
+      2px 0 0 0 rgba(200, 168, 78, 0.6),
+      -2px 0 0 0 rgba(200, 168, 78, 0.6),
+      0 2px 0 0 rgba(200, 168, 78, 0.6),
+      0 -2px 0 0 rgba(200, 168, 78, 0.6);
+  }
+
+  .dialog-box {
+    @apply bg-card pixel-border p-6 sm:p-8;
+  }
+
+  .btn-retro {
+    @apply font-display text-[10px] sm:text-xs tracking-wider border-2 border-gold/60 text-gold px-4 py-2
+           hover:bg-gold hover:text-bg hover:border-gold
+           active:translate-y-[2px] transition-all cursor-pointer;
+  }
+
+  .text-balance { text-wrap: balance; }
+
+  .blink { animation: blink 1s step-end infinite; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-8px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

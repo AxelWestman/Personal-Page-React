@@ -14,65 +14,71 @@ const Work_component = () => {
 
   const entries = [
     {
+      year: t('experience.entry2_year'),
+      title: 'Crombie',
+      subtitle: 'Full Stack Developer',
+      description: t('experience.entry2_desc'),
+      link: 'https://crombie.dev/',
+      techs: [react_logo, typescript_logo, nodejs_logo, mysql_logo],
+    },
+    {
       year: t('experience.entry1_year'),
       title: 'Required App',
       subtitle: 'Front-end Developer',
       description: t('experience.entry1_desc'),
       link: 'https://rqapp.com.ar/',
       techs: [html_photo, css_photo, javascript_logo, typescript_logo, angular_logo],
-      color: 'border-l-vermilion',
-    },
-    {
-      year: t('experience.entry2_year'),
-      title: 'Crombie',
-      subtitle: 'Full Stack Developer',
-      description: t('experience.entry2_desc'),
-      link: '#',
-      techs: [react_logo, typescript_logo, nodejs_logo, mysql_logo],
-      color: 'border-l-electric',
     },
   ];
 
-  return (
-    <section className="py-24 lg:py-32">
-      <div className="max-w-[1100px] mx-auto px-6 lg:px-12">
-        <div className="flex items-baseline gap-4 mb-16">
-          <span className="font-label text-[10px] tracking-[0.3em] text-ink-muted">02</span>
-          <span className="font-label text-xs tracking-[0.3em] uppercase text-vermilion">{t('experience.title')}</span>
-        </div>
+  const questColors = {
+    gold: 'before:bg-gold',
+    cyan: 'before:bg-cyan',
+  };
 
-        <div className="relative pl-8 lg:pl-12 border-l-2 border-ink/10">
+  return (
+    <section className="py-24 overflow-hidden">
+      <div className="max-w-[900px] mx-auto px-4 sm:px-6">
+        <p className="font-display text-[8px] tracking-[0.3em] text-cyan mb-8">
+          &gt; QUEST LOG_
+        </p>
+
+        <p className="font-display text-[10px] text-gold tracking-widest mb-12">
+          [{t('experience.title').toUpperCase()}]
+        </p>
+
+        <div className="space-y-8">
           {entries.map((entry, i) => (
-            <div key={i} className={`mb-16 last:mb-0 pl-6 border-l-3 ${entry.color} -ml-px`}>
-              <span className="font-mono text-xs text-ink-muted tracking-widest">
-                {entry.year}
-              </span>
-              <h3 className="font-display font-bold text-2xl sm:text-3xl text-ink mt-2">
-                {entry.title}
-              </h3>
-              <p className="font-mono text-xs text-ink-muted/60 mt-0.5">
-                {entry.subtitle}
-              </p>
-              <p className="font-mono text-sm text-ink-light mt-3 max-w-xl leading-relaxed">
-                {entry.description}
-              </p>
-              <div className="flex items-center gap-2 mt-4">
-                {entry.techs.map((tech, idx) => (
-                  <img key={idx} src={tech} alt="" className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                ))}
+            <div key={i} className="p-4 sm:p-6 border-2 border-gold/60 bg-card/85">
+              <div className="flex flex-col items-start gap-3 sm:gap-4">
+                <span className="font-display text-[7px] sm:text-[8px] tracking-wider text-gold shrink-0 mt-1">
+                  [{entry.year}]
+                </span>
+                <div className="min-w-0">
+                  <h3 className="font-display text-[10px] sm:text-xs text-gold tracking-wider">
+                    {entry.title}
+                  </h3>
+                  <p className="font-body text-lg text-text-dim mt-1">
+                    {entry.subtitle}
+                  </p>
+                  <p className="font-body text-lg text-text mt-3 leading-relaxed max-w-xl">
+                    {entry.description}
+                  </p>
+                  <div className="flex items-center gap-2 mt-4">
+                    {entry.techs.map((tech, idx) => (
+                      <img key={idx} src={tech} alt="" className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                    ))}
+                  </div>
+                  {entry.link !== '#' && (
+                    <a href={entry.link} target="_blank" rel="noopener noreferrer" className="font-display text-[7px] tracking-wider text-text-dim/40 hover:text-cyan transition-colors mt-3 inline-block">
+                      [{entry.link.replace('https://', '')}]
+                    </a>
+                  )}
+                </div>
               </div>
-              {entry.link !== '#' && (
-                <a href={entry.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-mono text-xs text-ink-muted border-b border-ink-muted/30 hover:text-ink hover:border-ink transition-all">
-                  {entry.link.replace('https://', '')}
-                </a>
-              )}
             </div>
           ))}
         </div>
-
-        <p className="font-mono text-xs text-ink-muted mt-10 italic">
-          {t('experience.footer')}
-        </p>
       </div>
       <div id="habilidades" className="h-0" />
     </section>

@@ -13,56 +13,72 @@ import nodejs_logo from '../assets/images/nodejs.png';
 import express_logo from '../assets/images/express.png';
 import { useLang } from '../i18n/LanguageContext';
 
-const skills = [
-  { name: 'HTML', src: html_photo, size: 'xs' },
-  { name: 'CSS', src: css_photo, size: 'xs' },
-  { name: 'JavaScript', src: javascript_logo, size: 'lg' },
-  { name: 'TypeScript', src: typescript_logo, size: 'lg' },
-  { name: 'React', src: react_logo, size: 'xl' },
-  { name: 'Angular', src: angular_logo, size: 'xl' },
-  { name: 'Tailwind', src: tailwind_logo, size: 'md' },
-  { name: 'Node.js', src: nodejs_logo, size: 'md' },
-  { name: 'Express', src: express_logo, size: 'sm' },
-  { name: 'MySQL', src: mysql_logo, size: 'md' },
-  { name: 'Git', src: git_logo, size: 'sm' },
-  { name: 'Figma', src: figma_logo, size: 'xs' },
+const inventory = [
+  { name: 'HTML', src: html_photo, rarity: 'common', size: 'sm' },
+  { name: 'CSS', src: css_photo, rarity: 'common', size: 'sm' },
+  { name: 'JavaScript', src: javascript_logo, rarity: 'rare', size: 'lg' },
+  { name: 'TypeScript', src: typescript_logo, rarity: 'rare', size: 'lg' },
+  { name: 'React', src: react_logo, rarity: 'epic', size: 'xl' },
+  { name: 'Angular', src: angular_logo, rarity: 'epic', size: 'xl' },
+  { name: 'Tailwind', src: tailwind_logo, rarity: 'uncommon', size: 'md' },
+  { name: 'Node.js', src: nodejs_logo, rarity: 'rare', size: 'md' },
+  { name: 'Express', src: express_logo, rarity: 'uncommon', size: 'md' },
+  { name: 'MySQL', src: mysql_logo, rarity: 'rare', size: 'md' },
+  { name: 'Git', src: git_logo, rarity: 'common', size: 'sm' },
+  { name: 'Figma', src: figma_logo, rarity: 'uncommon', size: 'sm' },
 ];
 
-const sizeClasses = {
-  xs: 'w-8 h-8',
-  sm: 'w-10 h-10',
-  md: 'w-12 h-12',
-  lg: 'w-16 h-16',
-  xl: 'w-20 h-20',
+const rarityColors = {
+  common: 'border-text-dim/20 hover:border-text-dim/40',
+  uncommon: 'border-green/30 hover:border-green/60',
+  rare: 'border-cyan/30 hover:border-cyan/60',
+  epic: 'border-magenta/30 hover:border-magenta/60',
 };
+
+const rarityLabels = {
+  common: 'text-text-dim',
+  uncommon: 'text-green',
+  rare: 'text-cyan',
+  epic: 'text-magenta',
+};
+
+const sizeMap = { sm: 'w-10 h-10', md: 'w-12 h-12', lg: 'w-14 h-14', xl: 'w-16 h-16' };
 
 const Technologies_component = () => {
   const { t } = useLang();
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-gray border-y-2 border-ink">
-      <div className="max-w-[1100px] mx-auto px-6 lg:px-12">
-        <div className="flex items-baseline gap-4 mb-12">
-          <span className="font-label text-[10px] tracking-[0.3em] text-ink-muted">03</span>
-          <span className="font-label text-xs tracking-[0.3em] uppercase text-vermilion">{t('skills.title')}</span>
-        </div>
+    <section className="py-24 overflow-hidden">
+      <div className="max-w-[900px] mx-auto px-4 sm:px-6">
+        <p className="font-display text-[8px] tracking-[0.3em] text-cyan mb-8">
+          &gt; INVENTORY_
+        </p>
 
-        <div className="flex flex-wrap items-center justify-start gap-5 md:gap-8">
-          {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="group flex flex-col items-center gap-2 cursor-default"
-            >
-              <img
-                src={skill.src}
-                alt={skill.name}
-                className={`${sizeClasses[skill.size]} object-contain opacity-80 group-hover:opacity-100 transition-all duration-300`}
-              />
-              <span className="font-mono text-[10px] text-ink-muted group-hover:text-ink transition-colors opacity-0 group-hover:opacity-100">
-                {skill.name}
-              </span>
-            </div>
-          ))}
+        <p className="font-display text-[10px] text-gold tracking-widest mb-10">
+          [{t('skills.title').toUpperCase()}]
+        </p>
+
+        <div className="p-4 sm:p-6 border-2 border-gold/60 bg-card/85">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+            {inventory.map((item, i) => (
+              <div
+                key={i}
+                className={`flex flex-col items-center gap-2 p-3 border-2 ${rarityColors[item.rarity]} transition-all group cursor-default`}
+              >
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className={`${sizeMap[item.size]} object-contain`}
+                />
+                <span className="font-display text-[6px] tracking-[0.15em] text-text-dim/60 group-hover:text-text-dim transition-colors text-center leading-relaxed">
+                  {item.name.toUpperCase()}
+                </span>
+                <span className={`font-display text-[5px] tracking-[0.2em] ${rarityLabels[item.rarity]} opacity-60`}>
+                  {item.rarity.toUpperCase()}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div id="proyectos" className="h-0" />
