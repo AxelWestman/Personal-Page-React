@@ -30,16 +30,6 @@
     );
   }
 
-  .pixel-border {
-    border: 3px solid;
-    @apply border-gold;
-    box-shadow:
-      3px 0 0 0 theme('colors.gold'),
-      -3px 0 0 0 theme('colors.gold'),
-      0 3px 0 0 theme('colors.gold'),
-      0 -3px 0 0 theme('colors.gold');
-  }
-
   .pixel-border-sm {
     border: 2px solid;
     @apply border-gold/60;
@@ -48,10 +38,6 @@
       -2px 0 0 0 rgba(200, 168, 78, 0.6),
       0 2px 0 0 rgba(200, 168, 78, 0.6),
       0 -2px 0 0 rgba(200, 168, 78, 0.6);
-  }
-
-  .dialog-box {
-    @apply bg-card pixel-border p-6 sm:p-8;
   }
 
   .btn-retro {
@@ -68,14 +54,4 @@
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-}
-
-@keyframes slideIn {
-  from { transform: translateX(-8px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes fadeUp {
-  from { transform: translateY(12px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
 }

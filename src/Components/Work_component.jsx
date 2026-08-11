@@ -1,12 +1,5 @@
 import React from 'react';
-import html_photo from '../assets/images/html.png';
-import css_photo from '../assets/images/css.png';
-import javascript_logo from '../assets/images/javascript.png';
-import typescript_logo from '../assets/images/typescript.png';
-import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
-import react_logo from '../assets/images/react.png';
-import nodejs_logo from '../assets/images/nodejs.png';
-import mysql_logo from '../assets/images/mysql.png';
+import techIcons, { renderTechIcon } from '../techIcons';
 import { useLang } from '../i18n/LanguageContext';
 
 const Work_component = () => {
@@ -19,7 +12,7 @@ const Work_component = () => {
       subtitle: 'Full Stack Developer',
       description: t('experience.entry2_desc'),
       link: 'https://crombie.dev/',
-      techs: [react_logo, typescript_logo, nodejs_logo, mysql_logo],
+      techs: [techIcons.react, techIcons.typescript, techIcons.nodejs, techIcons.mysql],
     },
     {
       year: t('experience.entry1_year'),
@@ -27,7 +20,7 @@ const Work_component = () => {
       subtitle: 'Front-end Developer',
       description: t('experience.entry1_desc'),
       link: 'https://rqapp.com.ar/',
-      techs: [html_photo, css_photo, javascript_logo, typescript_logo, angular_logo],
+      techs: [techIcons.html, techIcons.css, techIcons.javascript, techIcons.typescript, techIcons.angular],
     },
   ];
 
@@ -61,14 +54,14 @@ const Work_component = () => {
                   <p className="font-body text-lg text-text-dim mt-1">
                     {entry.subtitle}
                   </p>
-                  <p className="font-body text-lg text-text mt-3 leading-relaxed max-w-xl">
+                {/*<p className="font-body text-lg text-text mt-3 leading-relaxed max-w-xl">
                     {entry.description}
                   </p>
                   <div className="flex items-center gap-2 mt-4">
-                    {entry.techs.map((tech, idx) => (
-                      <img key={idx} src={tech} alt="" className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                    {entry.techs.map((icon, idx) => (
+                      <React.Fragment key={idx}>{renderTechIcon(icon, 'text-[24px] opacity-70 hover:opacity-100 transition-opacity')}</React.Fragment>
                     ))}
-                  </div>
+                  </div>*/}
                   {entry.link !== '#' && (
                     <a href={entry.link} target="_blank" rel="noopener noreferrer" className="font-display text-[7px] tracking-wider text-text-dim/40 hover:text-cyan transition-colors mt-3 inline-block">
                       [{entry.link.replace('https://', '')}]

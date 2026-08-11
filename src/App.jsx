@@ -5,6 +5,7 @@ import { LanguageProvider, useLang } from './i18n/LanguageContext';
 import Header_about_component from './Components/Header_about_component';
 import Work_component from './Components/Work_component';
 import Technologies_component from './Components/Technologies_component';
+import Perks_component from './Components/Perks_component';
 import Projects_component from './Components/Projects_component';
 import Contact_component from './Components/Contact_component';
 import Footer_component from './Components/Footer_component';
@@ -13,6 +14,7 @@ const sections = [
   { id: 'hero', label: 'START' },
   { id: 'experiencia', label: 'QUEST LOG' },
   { id: 'habilidades', label: 'INVENTORY' },
+  { id: 'perks', label: 'PERKS' },
   { id: 'proyectos', label: 'ITEMS' },
   { id: 'contacto', label: 'MAIL' },
 ];
@@ -155,6 +157,7 @@ function App() {
         <Header_about_component />
         <Work_component />
         <Technologies_component />
+        <Perks_component />
         <Projects_component />
         <Contact_component />
         <Footer_component />

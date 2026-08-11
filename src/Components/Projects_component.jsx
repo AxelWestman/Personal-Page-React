@@ -1,26 +1,17 @@
 import React from 'react';
-import html_photo from '../assets/images/html.png';
-import css_photo from '../assets/images/css.png';
-import javascript_logo from '../assets/images/javascript.png';
-import typescript_logo from '../assets/images/typescript.png';
-import react_logo from '../assets/images/react.png';
-import tailwind_logo from '../assets/images/tailwind.png';
-import bootstrap_logo from '../assets/images/bootstrap.png';
-import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
-import express_logo from '../assets/images/express.png';
-import mysql_logo from '../assets/images/mysql.png';
+import techIcons, { renderTechIcon } from '../techIcons';
 import { useLang } from '../i18n/LanguageContext';
 
 const Projects_component = () => {
   const { t } = useLang();
 
   const projects = [
-    { title: 'App Administración', desc: t('projects.project1_desc'), techs: [html_photo, css_photo, typescript_logo, angular_logo, express_logo, mysql_logo], link: 'http://104.236.85.47:8081', rarity: 'epic' },
-    { title: 'E-commerce', desc: t('projects.project2_desc'), techs: [html_photo, css_photo, typescript_logo, angular_logo, express_logo, mysql_logo], link: 'http://104.236.85.47/home', rarity: 'epic' },
-    { title: 'SpaceX Launches', desc: t('projects.project3_desc'), techs: [html_photo, tailwind_logo, javascript_logo, react_logo], link: 'https://axelwestman.github.io/spacex-missions/', rarity: 'rare' },
-    { title: 'Acme Rockets', desc: t('projects.project4_desc'), techs: [html_photo, tailwind_logo, javascript_logo], link: 'https://acme-rockets-7p76.onrender.com/', rarity: 'uncommon' },
-    { title: 'BuildCon', desc: t('projects.project5_desc'), techs: [html_photo, bootstrap_logo], link: 'https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/', rarity: 'common' },
-    { title: 'FOODIE', desc: t('projects.project6_desc'), techs: [html_photo, css_photo, javascript_logo, react_logo], link: 'https://axelwestman.github.io/landing-page-react/build/', rarity: 'uncommon' },
+    { title: 'App Administración', desc: t('projects.project1_desc'), techs: [techIcons.html, techIcons.css, techIcons.typescript, techIcons.angular, techIcons.express, techIcons.mysql], link: 'http://104.236.85.47:8081', rarity: 'epic' },
+    { title: 'E-commerce', desc: t('projects.project2_desc'), techs: [techIcons.html, techIcons.css, techIcons.typescript, techIcons.angular, techIcons.express, techIcons.mysql], link: 'http://104.236.85.47/home', rarity: 'epic' },
+    { title: 'SpaceX Launches', desc: t('projects.project3_desc'), techs: [techIcons.html, techIcons.tailwind, techIcons.javascript, techIcons.react], link: 'https://axelwestman.github.io/spacex-missions/', rarity: 'rare' },
+    { title: 'Acme Rockets', desc: t('projects.project4_desc'), techs: [techIcons.html, techIcons.tailwind, techIcons.javascript], link: 'https://acme-rockets-7p76.onrender.com/', rarity: 'uncommon' },
+    { title: 'BuildCon', desc: t('projects.project5_desc'), techs: [techIcons.html, techIcons.bootstrap], link: 'https://axelwestman.github.io/Responsive-Landing-Page-With-Bootstrap/', rarity: 'common' },
+    { title: 'FOODIE', desc: t('projects.project6_desc'), techs: [techIcons.html, techIcons.css, techIcons.javascript, techIcons.react], link: 'https://axelwestman.github.io/landing-page-react/build/', rarity: 'uncommon' },
   ];
 
   const rarityStyles = {
@@ -71,8 +62,8 @@ const Projects_component = () => {
                 {project.desc}
               </p>
               <div className="flex items-center gap-1.5 mb-3">
-                {project.techs.map((tech, idx) => (
-                  <img key={idx} src={tech} alt="" className="w-5 h-5 object-contain opacity-50 group-hover:opacity-80 transition-opacity" />
+                {project.techs.map((icon, idx) => (
+                  <React.Fragment key={idx}>{renderTechIcon(icon, 'text-[20px] opacity-50 group-hover:opacity-80 transition-opacity')}</React.Fragment>
                 ))}
               </div>
               <span className="font-display text-[6px] tracking-[0.2em] text-text-dim/30 group-hover:text-cyan/60 transition-colors">

@@ -1,31 +1,24 @@
 import React from 'react';
-import html_photo from '../assets/images/html.png';
-import css_photo from '../assets/images/css.png';
-import javascript_logo from '../assets/images/javascript.png';
-import typescript_logo from '../assets/images/typescript.png';
-import react_logo from '../assets/images/react.png';
-import figma_logo from '../assets/images/figma.png';
-import tailwind_logo from '../assets/images/tailwind.png';
-import git_logo from '../assets/images/git.png';
-import angular_logo from '../assets/images/Angular_full_color_logo.svg.png';
-import mysql_logo from '../assets/images/mysql.png';
-import nodejs_logo from '../assets/images/nodejs.png';
-import express_logo from '../assets/images/express.png';
+import techIcons, { renderTechIcon } from '../techIcons';
 import { useLang } from '../i18n/LanguageContext';
 
 const inventory = [
-  { name: 'HTML', src: html_photo, rarity: 'common', size: 'sm' },
-  { name: 'CSS', src: css_photo, rarity: 'common', size: 'sm' },
-  { name: 'JavaScript', src: javascript_logo, rarity: 'rare', size: 'lg' },
-  { name: 'TypeScript', src: typescript_logo, rarity: 'rare', size: 'lg' },
-  { name: 'React', src: react_logo, rarity: 'epic', size: 'xl' },
-  { name: 'Angular', src: angular_logo, rarity: 'epic', size: 'xl' },
-  { name: 'Tailwind', src: tailwind_logo, rarity: 'uncommon', size: 'md' },
-  { name: 'Node.js', src: nodejs_logo, rarity: 'rare', size: 'md' },
-  { name: 'Express', src: express_logo, rarity: 'uncommon', size: 'md' },
-  { name: 'MySQL', src: mysql_logo, rarity: 'rare', size: 'md' },
-  { name: 'Git', src: git_logo, rarity: 'common', size: 'sm' },
-  { name: 'Figma', src: figma_logo, rarity: 'uncommon', size: 'sm' },
+  { name: 'HTML', className: techIcons.html, rarity: 'common', size: 'sm' },
+  { name: 'CSS', className: techIcons.css, rarity: 'common', size: 'sm' },
+  { name: 'JavaScript', className: techIcons.javascript, rarity: 'rare', size: 'lg' },
+  { name: 'TypeScript', className: techIcons.typescript, rarity: 'rare', size: 'lg' },
+  { name: 'React', className: techIcons.react, rarity: 'epic', size: 'xl' },
+  { name: 'Angular', className: techIcons.angular, rarity: 'epic', size: 'xl' },
+  { name: 'Tailwind', className: techIcons.tailwind, rarity: 'uncommon', size: 'md' },
+  { name: 'Node.js', className: techIcons.nodejs, rarity: 'rare', size: 'md' },
+  { name: 'Express', className: techIcons.express, rarity: 'uncommon', size: 'md' },
+  { name: 'MySQL', className: techIcons.mysql, rarity: 'rare', size: 'md' },
+  { name: 'Git', className: techIcons.git, rarity: 'common', size: 'sm' },
+  { name: 'Figma', className: techIcons.figma, rarity: 'uncommon', size: 'sm' },
+  { name: 'PostgreSQL', className: techIcons.postgres, rarity: 'rare', size: 'md' },
+  { name: 'Next.js', className: techIcons.next, rarity: 'epic', size: 'xl' },
+  { name: 'NestJS', className: techIcons.nest, rarity: 'rare', size: 'md' },
+  { name: 'Strapi', className: techIcons.strapi, rarity: 'uncommon', size: 'md' },
 ];
 
 const rarityColors = {
@@ -42,7 +35,7 @@ const rarityLabels = {
   epic: 'text-magenta',
 };
 
-const sizeMap = { sm: 'w-10 h-10', md: 'w-12 h-12', lg: 'w-14 h-14', xl: 'w-16 h-16' };
+const sizeMap = { sm: 'text-[40px]', md: 'text-[48px]', lg: 'text-[56px]', xl: 'text-[64px]' };
 
 const Technologies_component = () => {
   const { t } = useLang();
@@ -65,11 +58,7 @@ const Technologies_component = () => {
                 key={i}
                 className={`flex flex-col items-center gap-2 p-3 border-2 ${rarityColors[item.rarity]} transition-all group cursor-default`}
               >
-                <img
-                  src={item.src}
-                  alt={item.name}
-                  className={`${sizeMap[item.size]} object-contain`}
-                />
+                {renderTechIcon(item.className, sizeMap[item.size])}
                 <span className="font-display text-[6px] tracking-[0.15em] text-text-dim/60 group-hover:text-text-dim transition-colors text-center leading-relaxed">
                   {item.name.toUpperCase()}
                 </span>
@@ -81,7 +70,7 @@ const Technologies_component = () => {
           </div>
         </div>
       </div>
-      <div id="proyectos" className="h-0" />
+      <div id="perks" className="h-0" />
     </section>
   );
 };

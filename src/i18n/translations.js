@@ -8,7 +8,7 @@ const translations = {
       mail: 'Mail',
     },
     hero: {
-      role: 'Front-end developer',
+      role: 'Full Stack Developer',
       seeWork: 'ver trabajo',
       contact: 'contacto',
     },
@@ -31,6 +31,21 @@ const translations = {
     },
     skills: {
       title: 'Habilidades',
+    },
+    perks: {
+      title: 'Aptitudes',
+      ai_label: 'Desarrollo con IA',
+      ai_desc: 'Desarrollo asistido por inteligencia artificial utilizando agentes, skills personalizadas, MCP y prompt engineering.',
+      a11y_label: 'Accesibilidad Web',
+      a11y_desc: 'Desarrollo accesible con ARIA, HTML semántico y cumplimiento de lectores de pantalla.',
+      scrum_label: 'Agile / Scrum',
+      scrum_desc: 'Metodologías ágiles y framework Scrum para entrega colaborativa de software.',
+      docker_label: 'Docker',
+      docker_desc: 'Containerización para entornos de desarrollo y despliegue consistentes y reproducibles.',
+      seo_label: 'SEO',
+      seo_desc: 'Optimización para motores de búsqueda, mejorando visibilidad, rendimiento y accesibilidad.',
+      soft_label: 'Soft Skills',
+      soft_desc: 'Proactivo, responsable, buen compañero, atento y comunicativo. Capaz de adaptarme a nuevos desafíos y resolver problemas de forma autónoma.',
     },
     projects: {
       title: 'Proyectos',
@@ -67,7 +82,7 @@ const translations = {
       mail: 'Mail',
     },
     hero: {
-      role: 'Front-end developer',
+      role: 'Full Stack Developer',
       seeWork: 'see work',
       contact: 'contact',
     },
@@ -90,6 +105,21 @@ const translations = {
     },
     skills: {
       title: 'Skills',
+    },
+    perks: {
+      title: 'Expertise',
+      ai_label: 'AI-Powered Dev',
+      ai_desc: 'AI-assisted development using agents, custom skills, MCP and prompt engineering.',
+      a11y_label: 'Web Accessibility',
+      a11y_desc: 'Accessible development with ARIA, semantic HTML and screen reader compliance.',
+      scrum_label: 'Agile / Scrum',
+      scrum_desc: 'Agile methodologies and Scrum framework for collaborative software delivery.',
+      docker_label: 'Docker',
+      docker_desc: 'Containerization for consistent and reproducible development and deployment environments.',
+      seo_label: 'SEO',
+      seo_desc: 'Search engine optimization for better visibility, performance and accessibility.',
+      soft_label: 'Soft Skills',
+      soft_desc: 'Proactive, responsible, collaborative, attentive and communicative. Adaptable to new challenges with strong problem-solving mindset.',
     },
     projects: {
       title: 'Projects',

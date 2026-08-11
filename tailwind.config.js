@@ -1,12 +1,8 @@
-const {nextui} = require("@nextui-org/react");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -30,11 +26,7 @@ module.exports = {
         display: ['"Press Start 2P"', 'monospace'],
         body: ['"VT323"', 'monospace'],
       },
-      animation: {
-        'slide-in': 'slideIn 0.3s ease forwards',
-        'fade-up': 'fadeUp 0.4s ease forwards',
-      },
     },
   },
-  plugins: [nextui()],
+  plugins: [],
 };
